@@ -7,9 +7,9 @@ $(document).ready(function() {
 		success : function(data) {
 			$.each(data, function(index) {
 				this.serialNo = index + 1;
+				this.image="<img id='blah' width='50px;' height='50px'  src='../"+this.surveyDoc+"' alt='' />";
 			});
 			setTableData(data);
-			console.log(data)
 		},
 		dataType : "json",
 		contentType : 'application/json; charset=utf-8',
@@ -34,7 +34,7 @@ function setTableData(dataSet) {
 		}, {
 			"data" : "surveyDate"
 		}, {
-			"data" : "surveyDoc"
+			"data" : "image"
 		}, {
 			"data" : "remark"
 		} ]

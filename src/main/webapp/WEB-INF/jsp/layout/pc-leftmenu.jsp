@@ -81,7 +81,7 @@
 
 				</a></li>
 
-				<li class="menu-item-has-children dropdown"><a href="#"
+				<li class="cui-menu-left-item-has-children dropdown"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"><span class="cui-menu-left-title">
 							Reports </span> </a>

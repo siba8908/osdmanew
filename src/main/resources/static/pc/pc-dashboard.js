@@ -5,15 +5,14 @@ $(document).ready(function() {
 		error : function(e) {
 		},
 		success : function(data) {
-			console.log(data)
 			$.each(data, function(index) {
 				this.serialNo = index + 1;
 				if(this.masterTeam.pmTeamMembers[0].status=="ASSIGNED"){
-					this.taskStatus='<button type="button" class="btn btn-info mr-2 mb-2 btn-accept">Accept</button><button type="button" class="btn btn-danger mr-2 mb-2 btn-reject">Reject</button>';
+					this.teamTaskStatus='<button type="button" class="btn btn-info mr-2 mb-2 btn-accept">Accept</button><button type="button" class="btn btn-danger mr-2 mb-2 btn-reject">Reject</button>';
 				}else if(this.masterTeam.pmTeamMembers[0].status=="ACCEPTED"){
-					this.taskStatus='<button type="button" class="btn btn-success mr-2 mb-2">Accepted</button>';
+					this.teamTaskStatus='<button type="button" class="btn btn-success mr-2 mb-2">Accepted</button>';
 				}else{
-					this.taskStatus='<button type="button" class="btn btn-danger mr-2 mb-2">Rejected</button>';
+					this.teamTaskStatus='<button type="button" class="btn btn-danger mr-2 mb-2">Rejected</button>';
 				}
 			});
 			setTableData(data);
@@ -45,7 +44,7 @@ function setTableData(dataSet) {
 		}, {
 			"data" : "masterTeam.teamName"
 		}, {
-			"data" : "taskStatus"
+			"data" : "teamTaskStatus"
 		} ]
 	});
 	
@@ -73,12 +72,11 @@ function setTableData(dataSet) {
     });
 }
 function updateTask(currentRowData){
-	console.log(currentRowData)
 	 $.ajax({
 	        url: "update-pm-team-task",
 	        data: JSON.stringify(currentRowData),
 	        error: function (e) {
-	        	window.location.reload();
+	        	//window.location.reload();
 	        },
 	        success: function (data) {
 	        },

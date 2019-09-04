@@ -57,7 +57,7 @@ public class FileUploadUtility {
 				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
 				stream.write(bytes);
 				stream.close();
-				imagePath=filepath+fileName;
+				imagePath="project-images/"+fileName;
 				System.out.println("You successfully uploaded file :" +fileName);
 				return imagePath;
 			} catch (Exception e) {
