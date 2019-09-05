@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 function fetchAllTeams() {
 	$.ajax({
-		url : "/fetch-teams",
+		url : "fetch-teams",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -65,7 +65,7 @@ function getTeamMembers(e) {
     		}
     }
 	$.ajax({
-		url : "/get-team-members",
+		url : "get-team-members",
 		data : JSON.stringify(teamData),
 		error : function(e) {
 			console.log(e)
@@ -130,7 +130,7 @@ function fetchDetailsForCreateTeam() {
 
 function fetchProjectCoordinators() {
 	$.ajax({
-	      url: "api/fetch-employees-as-project-coordinator",
+	      url: "fetch-employees-as-project-coordinator",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -150,7 +150,7 @@ function fetchProjectCoordinators() {
 
 function fetchSiteManager() {
 	$.ajax({
-	      url: "api/fetch-employees-as-site-manager",
+	      url: "fetch-employees-as-site-manager",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -170,7 +170,7 @@ function fetchSiteManager() {
 
 function fetchSiteEngineer() {
 	$.ajax({
-	      url: "api/fetch-employees-as-site-engineer",
+	      url: "fetch-employees-as-site-engineer",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -191,7 +191,7 @@ function fetchSiteEngineer() {
 
 function fetchSiteAssistance() {
 	$.ajax({
-	      url: "api/fetch-employees-as-site-assistance",
+	      url: "fetch-employees-as-site-assistance",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -263,7 +263,7 @@ function createTeam() {
 	console.log(saveData);
 	
 	$.ajax({
-		url : "api/create-team-with-members",
+		url : "create-team-with-members",
 		data : JSON.stringify(saveData),
 		error : function(e) {
 			console.log(e)

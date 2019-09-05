@@ -1,4 +1,4 @@
-package com.sunjray.osdma.PCcontroller;
+package com.sunjray.osdma.PMcontroller;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -25,9 +25,9 @@ import com.sunjray.osdma.util.HeaderUtil;
 
 @RestController
 @RequestMapping("/pm")
-public class MasterTeamController {
-	
-	private final Logger log = LoggerFactory.getLogger(MasterTeamController.class);
+public class PmTeamController {
+
+private final Logger log = LoggerFactory.getLogger(PmTeamController.class);
 	
 	@Resource
 	MasterTeamRepository masterTeamRepository;
@@ -35,19 +35,7 @@ public class MasterTeamController {
 	@Resource
 	MasterTeamService masterTeamService;
 	
-    
-    @PostMapping("/create-team-with-members")
-	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<AppResponse> createTeamWithMembers(@RequestBody TeamMemberDTO teamMemberDTO) throws URISyntaxException {
-        log.debug("REST request to create MasterTeams");
-        masterTeamService.createTeamWithMembers(teamMemberDTO);
-        return ResponseEntity.created(new URI("/api/create-team-with-members"))
-	            .headers(HeaderUtil.createEntityCreationAlert("MasterTeam", "created"))
-	            .body(new AppResponse("success"));
-    }
-    
-    
-    /**
+	/**
      * POST  /fetch-team-members : get  PmTeamMembers.
      *
      * @param PmTeamMember 
@@ -58,4 +46,14 @@ public class MasterTeamController {
         return masterTeamService.findByMasterTeam(pmTeamMember.getMasterTeam());
     }
 
+    @PostMapping("/create-team-with-members")
+	@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity<AppResponse> createTeamWithMembers(@RequestBody TeamMemberDTO teamMemberDTO) throws URISyntaxException {
+        log.debug("REST request to create MasterTeams");
+        masterTeamService.createTeamWithMembers(teamMemberDTO);
+        return ResponseEntity.created(new URI("/create-team-with-members"))
+	            .headers(HeaderUtil.createEntityCreationAlert("MasterTeam", "created"))
+	            .body(new AppResponse("success"));
+    }
+    
 }
