@@ -56,74 +56,7 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td class="txt1">32564</td>
-													<td>Material Description</td>
-													<td class="txt1">5</td>
-													<td>oD02AB0000</td>
-													<td class="txt1">321064</td>
-													<td>Lr Details</td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init" /></td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init1" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init1" /></td>
-													<td>11:00AM</td>
-												</tr>
-												<tr>
-													<td class="txt1">32587</td>
-													<td>Material Description</td>
-													<td class="txt1">5</td>
-													<td>oD02AB0001</td>
-													<td class="txt1">321065</td>
-													<td>Lr Details</td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init3" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init3" /></td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init4" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init4" /></td>
-													<td>11:00AM</td>
-												</tr>
-												<tr>
-													<td class="txt1">54879</td>
-													<td>Material Description</td>
-													<td class="txt1">7</td>
-													<td>oD02AB0002</td>
-													<td class="txt1">32548</td>
-													<td>Lr Details</td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init5" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init5" /></td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init6" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init6" /></td>
-													<td>11:00AM</td>
-												</tr>
-												<tr>
-													<td class="txt1">32569</td>
-													<td>Material Description</td>
-													<td class="txt1">8</td>
-													<td>oD02AB003</td>
-													<td class="txt1">321546</td>
-													<td>Lr Details</td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init7" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init7" /></td>
-													<td class="txt1"><input type="text"
-														class="form-control" placeholder="Select Date"
-														id="datepicker-only-init8" data-toggle="datetimepicker"
-														data-target="#datepicker-only-init8" /></td>
-													<td>11:00AM</td>
-												</tr>
+												
 											</tbody>
 
 										</table>
@@ -191,17 +124,17 @@
 			</div>
 		</div>
 	</div>
-	<script src="vendors/data-table/datatables.min.js"></script>
-	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
-	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
-	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
-	<script src="vendors/data-table/jszip.min.js"></script>
-	<script src="vendors/data-table/pdfmake.min.js"></script>
-	<script src="vendors/data-table/vfs_fonts.js"></script>
-	<script src="vendors/data-table/buttons.html5.min.js"></script>
-	<script src="vendors/data-table/buttons.print.min.js"></script>
-	<script src="vendors/data-table/buttons.colVis.min.js"></script>
-	<script src="vendors/data-table/datatables-init.js"></script>
-	<script src="logistics/logistics-order-track.js"></script>
+	<script src="../vendors/data-table/datatables.min.js"></script>
+	<script src="../vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="../vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/jszip.min.js"></script>
+	<script src="../vendors/data-table/pdfmake.min.js"></script>
+	<script src="../vendors/data-table/vfs_fonts.js"></script>
+	<script src="../vendors/data-table/buttons.html5.min.js"></script>
+	<script src="../vendors/data-table/buttons.print.min.js"></script>
+	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="../vendors/data-table/datatables-init.js"></script>
+	<script src="../lg/logistics-order-track.js"></script>
 </body>
 </html>

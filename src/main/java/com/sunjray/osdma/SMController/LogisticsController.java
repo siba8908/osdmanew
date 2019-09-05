@@ -12,7 +12,7 @@ import com.sunjray.osdma.SMservice.LogisticsService;
 import com.sunjray.osdma.dto.ConsignmentLogisticDTO;
 
 @RestController
-@RequestMapping("logistics")
+@RequestMapping("lg")
 public class LogisticsController {
 
 	@Resource

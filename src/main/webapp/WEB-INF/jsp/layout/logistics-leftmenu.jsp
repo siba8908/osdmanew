@@ -19,7 +19,7 @@
 		<div class="cui-menu-left-scroll">
 			<ul class="cui-menu-left-list cui-menu-left-list-root">
 				<li class="cui-menu-left-item"><a
-					href="sm-logistics-dashboard"
+					href="logistic-dashboard"
 					class="cui-menu-right-action-toggle"> <span
 						class="cui-menu-left-icon icmn-cog"></span> <span
 						class="cui-menu-left-title">Dashboard</span>
@@ -28,7 +28,7 @@
 					<!-- -->
 				</li>
 				<li class="cui-menu-left-item"><a
-					href="sm-logistics-order-tracking-details"> <span
+					href="logistics-order-tracking-details"> <span
 						class="cui-menu-left-icon icmn-books"></span> <span
 						class="cui-menu-left-title">Order Tracking</span>
 				</a></li>
@@ -36,7 +36,7 @@
 					<!-- -->
 				</li>
 				<li class="cui-menu-left-item"><a
-					href="sm-logistics-status"> <span
+					href="logistics-status"> <span
 						class="cui-menu-left-icon icmn-books"></span> <span
 						class="cui-menu-left-title">Logistics Status</span>
 				</a></li>
