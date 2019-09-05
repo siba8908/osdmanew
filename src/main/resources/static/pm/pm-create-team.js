@@ -72,6 +72,7 @@ function getTeamMembers(e) {
 			swal({
 				position : 'top',
 				type : 'error',
+				title : '',
 				text : 'Error in data fetch.',
 				showConfirmButton : false,
 				timer : 2500
@@ -270,6 +271,7 @@ function createTeam() {
 			swal({
 				position : 'top',
 				type : 'error',
+				title : '',
 				text : 'Error in save.',
 				showConfirmButton : false,
 				timer : 2500
@@ -280,6 +282,7 @@ function createTeam() {
 			swal({
 				position : 'top',
 				type : 'success',
+				title : '',
 				text : 'Created successfully.',
 				showConfirmButton : false,
 				timer : 2500

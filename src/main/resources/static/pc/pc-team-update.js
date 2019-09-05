@@ -67,6 +67,7 @@ function getTeamMembersList(teamData) {
 			swal({
 				position : 'top',
 				type : 'error',
+				title : '',
 				text : 'Error in data fetch.',
 				showConfirmButton : false,
 				timer : 2500
@@ -169,6 +170,7 @@ function updateTeamEmployee() {
 		swal({
 			position : 'top',
 			type : 'error',
+			title : '',
 			text : 'Please select an employee.',
 			showConfirmButton : false,
 			timer : 2500
@@ -198,6 +200,7 @@ function updateTeamEmployee() {
 			swal({
 				position : 'top',
 				type : 'error',
+				title : '',
 				text : 'Error in submit.',
 				showConfirmButton : false,
 				timer : 2500
@@ -208,6 +211,7 @@ function updateTeamEmployee() {
 			swal({
 				position : 'top',
 				type : 'success',
+				title : '',
 				text : 'Team updated successfully.',
 				showConfirmButton : false,
 				timer : 2500

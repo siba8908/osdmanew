@@ -101,6 +101,7 @@ function sendFundRequest() {
 			swal({
 				position : 'top',
 				type : 'error',
+				title : '',
 				text : 'Error in submit.',
 				showConfirmButton : false,
 				timer : 2500
@@ -111,6 +112,7 @@ function sendFundRequest() {
 			swal({
 				position : 'top',
 				type : 'success',
+				title : '',
 				text : 'Request submitted successfully.',
 				showConfirmButton : false,
 				timer : 2500

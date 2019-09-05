@@ -88,6 +88,7 @@ function setTableData(dataSet) {
     			swal({
     				position : 'top',
     				type : 'error',
+    				title : '',
     				text : 'Error in submit.',
     				showConfirmButton : false,
     				timer : 2500
@@ -98,6 +99,7 @@ function setTableData(dataSet) {
     			swal({
     				position : 'top',
     				type : 'success',
+    				title : '',
     				text : 'Submitted successfully.',
     				showConfirmButton : false,
     				timer : 2500

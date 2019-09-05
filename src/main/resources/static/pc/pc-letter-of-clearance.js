@@ -129,6 +129,7 @@ function submitLetterClearance() {
 			console.log(e)
 			swal({
 				position : 'top',
+				title: '',
 				type : 'error',
 				text : 'Error in submit.',
 				showConfirmButton : false,
@@ -140,6 +141,7 @@ function submitLetterClearance() {
 			swal({
 				position : 'top',
 				type : 'success',
+				title : '',
 				text : 'Submitted successfully.',
 				showConfirmButton : false,
 				timer : 2500
