@@ -1,7 +1,7 @@
-var _tableSiteSurveyReports;
+var _tableFundRequisitionReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/pc/fetch-site-survey",
+		url : "/pc/fetch-all-fund-request-for-requisition",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -19,34 +19,34 @@ $(document).ready(function() {
 	});
 });
 function setTableData(dataSet) {
-	if (_tableSiteSurveyReports) {
-		_tableSiteSurveyReports.destroy();
-		$('#pcSiteSurveyReportTable tbody').off('click');
+	if (_tableFundRequisitionReports) {
+		_tableFundRequisitionReports.destroy();
+		$('#pcFundRequisitionReportTable tbody').off('click');
 	}
-	_tableSiteSurveyReports = $('#pcSiteSurveyReportTable').DataTable({
+	_tableFundRequisitionReports = $('#pcFundRequisitionReportTable').DataTable({
 		data : dataSet,
 		columns : [ {
 			"data" : "serialNo"
 		}, {
-			"data" : "siteCode.siteCode"
+			"data" : "sitecode.siteCode"
 		}, {
-			"data" : "siteCode.siteName"
+			"data" : "masterWorkStage.stageName"
 		}, {
-			"data" : "surveyDate"
+			"data" : "amount"
 		}, {
-			"data" : "image"
+			"data" : "purpose"
 		}, {
 			"data" : "remark"
 		} ]
 	});
-	 $('#pcSiteSurveyReportTable thead tr').clone(true).appendTo( '#pcSiteSurveyReportTable thead' );
-	    $('#pcSiteSurveyReportTable thead tr:eq(1) th').each( function (i) {
+	 $('#pcFundRequisitionReportTable thead tr').clone(true).appendTo( '#pcFundRequisitionReportTable thead' );
+	    $('#pcFundRequisitionReportTable thead tr:eq(1) th').each( function (i) {
 	        var title = $(this).text();
 	        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
 	 
 	        $( 'input', this ).on( 'keyup change', function () {
-	            if ( _tableSiteSurveyReports.column(i).search() !== this.value ) {
-	            	_tableSiteSurveyReports
+	            if ( _tableFundRequisitionReports.column(i).search() !== this.value ) {
+	            	_tableFundRequisitionReports
 	                    .column(i)
 	                    .search( this.value )
 	                    .draw();

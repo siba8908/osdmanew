@@ -32,7 +32,7 @@ public class LetterClearance implements java.io.Serializable {
 	@Column(name = "letter_clearance_id", unique = true, nullable = false)
 	private Long letterClearanceId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "letter_type",  referencedColumnName = "letter_type_id")
 	private LetterTypeMaster letterType;
 
