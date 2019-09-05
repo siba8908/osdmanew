@@ -18,21 +18,21 @@ import com.sunjray.osdma.util.FileUploadUtility;
 
 @Service
 public class PmFundRequestServiceImpl implements PmFundRequestService {
-	
+
 	@Resource
 	PmFundRequestRepository PmFundRequestRepository;
-	
+
 	@Resource
 	FileUploadUtility fileUploadUtility;
 
 	@Override
 	public void save(@Valid List<PmFundRequest> pmFundRequests) {
 
-		pmFundRequests.forEach(fundRequest->{
+		pmFundRequests.forEach(fundRequest -> {
 			fundRequest.setStatus(Status.PENDING);
 			fundRequest.setCreatedDate(new Date());
 		});
-		
+
 		PmFundRequestRepository.saveAll(pmFundRequests);
 	}
 
@@ -45,11 +45,17 @@ public class PmFundRequestServiceImpl implements PmFundRequestService {
 	public PmFundRequest updateBill(@Valid PmFundRequest fundRequest) {
 		String imagePath = "";
 		if (null != fundRequest.getBill()) {
-			String fileName = "pm-fund-requisition-bill" + "_" + CommonUtil.fetchTimeInMilliSeconds() + AWSConstants.AWS_FILE_FORMAT;
+			String fileName = "pm-fund-requisition-bill" + "_" + CommonUtil.fetchTimeInMilliSeconds()
+					+ AWSConstants.AWS_FILE_FORMAT;
 			imagePath = fileUploadUtility.saveImage(fileName, fundRequest.getBill(), "");
 		}
 		fundRequest.setBill(imagePath);
 		return PmFundRequestRepository.saveAndFlush(fundRequest);
+	}
+
+	@Override
+	public List<PmFundRequest> getAllFundRequestForRequisition() {
+		return PmFundRequestRepository.findAll();
 	}
 
 }

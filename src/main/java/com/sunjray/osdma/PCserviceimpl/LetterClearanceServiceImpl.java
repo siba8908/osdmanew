@@ -13,7 +13,6 @@ import com.sunjray.osdma.constants.AWSConstants;
 import com.sunjray.osdma.util.CommonUtil;
 import com.sunjray.osdma.util.FileUploadUtility;
 
-
 @Transactional
 @Service
 public class LetterClearanceServiceImpl implements LetterClearanceService {
@@ -23,18 +22,23 @@ public class LetterClearanceServiceImpl implements LetterClearanceService {
 	@Autowired
 	FileUploadUtility fileUploadUtility;
 
-
 	@Override
 	public void save(List<LetterClearance> letterClearances) {
-		letterClearances.forEach(item->{
+		letterClearances.forEach(item -> {
 			String imagePath = "";
 			if (!item.getLetterDoc().isEmpty()) {
-				String fileName = "pc-clearance-letter" + "_" + CommonUtil.fetchTimeInMilliSeconds() + AWSConstants.AWS_FILE_FORMAT;
+				String fileName = "pc-clearance-letter" + "_" + CommonUtil.fetchTimeInMilliSeconds()
+						+ AWSConstants.AWS_FILE_FORMAT;
 				imagePath = fileUploadUtility.saveImage(fileName, item.getLetterDoc(), "");
 			}
 			item.setLetterDoc(imagePath);
 		});
 		letterClearanceRepository.saveAll(letterClearances);
+	}
+
+	@Override
+	public List<LetterClearance> getLetterClearance() {
+		return letterClearanceRepository.findAll();
 	}
 
 }

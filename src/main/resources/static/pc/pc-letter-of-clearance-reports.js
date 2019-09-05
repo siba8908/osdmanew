@@ -1,7 +1,7 @@
-var _tableSiteSurveyReports;
+var _tableLetterOfClearanceReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/pc/fetch-site-survey",
+		url : "/pc/fetch-letter-clearance",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -19,34 +19,32 @@ $(document).ready(function() {
 	});
 });
 function setTableData(dataSet) {
-	if (_tableSiteSurveyReports) {
-		_tableSiteSurveyReports.destroy();
-		$('#pcSiteSurveyReportTable tbody').off('click');
+	if (_tableLetterOfClearanceReports) {
+		_tableLetterOfClearanceReports.destroy();
+		$('#pcLetterOfClearanceReportTable tbody').off('click');
 	}
-	_tableSiteSurveyReports = $('#pcSiteSurveyReportTable').DataTable({
+	_tableLetterOfClearanceReports = $('#pcLetterOfClearanceReportTable').DataTable({
 		data : dataSet,
 		columns : [ {
 			"data" : "serialNo"
 		}, {
 			"data" : "siteCode.siteCode"
 		}, {
-			"data" : "siteCode.siteName"
+			"data" : "letterType.letterType"
 		}, {
-			"data" : "surveyDate"
+			"data" : "submissionDate"
 		}, {
 			"data" : "image"
-		}, {
-			"data" : "remark"
 		} ]
 	});
-	 $('#pcSiteSurveyReportTable thead tr').clone(true).appendTo( '#pcSiteSurveyReportTable thead' );
-	    $('#pcSiteSurveyReportTable thead tr:eq(1) th').each( function (i) {
+	 $('#pcLetterOfClearanceReportTable thead tr').clone(true).appendTo( '#pcLetterOfClearanceReportTable thead' );
+	    $('#pcLetterOfClearanceReportTable thead tr:eq(1) th').each( function (i) {
 	        var title = $(this).text();
 	        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
 	 
 	        $( 'input', this ).on( 'keyup change', function () {
-	            if ( _tableSiteSurveyReports.column(i).search() !== this.value ) {
-	            	_tableSiteSurveyReports
+	            if ( _tableLetterOfClearanceReports.column(i).search() !== this.value ) {
+	            	_tableLetterOfClearanceReports
 	                    .column(i)
 	                    .search( this.value )
 	                    .draw();

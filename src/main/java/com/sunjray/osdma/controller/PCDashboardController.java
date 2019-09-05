@@ -71,4 +71,14 @@ public class PCDashboardController {
 	ModelAndView pcsiteserveyreports() {
 		return new ModelAndView("PC/pc-site-survey-reports");
 	}
+
+	@RequestMapping("/pc-fund-requisition-reports")
+	ModelAndView pcfundrequisitionreports() {
+		return new ModelAndView("PC/pc-fund-requisition-reports");
+	}
+
+	@RequestMapping("/pc-letter-of-clearance-reports")
+	ModelAndView pcletterofclearancereports() {
+		return new ModelAndView("PC/pc-letter-of-clearance-reports");
+	}
 }

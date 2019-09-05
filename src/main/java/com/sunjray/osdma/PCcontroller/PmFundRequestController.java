@@ -61,6 +61,19 @@ public class PmFundRequestController {
 	}
 	
 	/**
+	 * GET /fetch-fund-request-for-requisition : get all the PmFundRequest.
+	 *
+	 * @return the ResponseEntity with status 200 (OK) and the list of
+	 *         PmFundRequest in body
+	 */
+	@GetMapping("/fetch-all-fund-request-for-requisition")
+	public List<PmFundRequest> getAllFundRequestForRequisition() {
+		log.debug("REST request to get all LetterTypeMaster");
+		return pmFundRequestService.getAllFundRequestForRequisition();
+	}
+	
+	
+	/**
      * POST  /colors : Create a new color.
      *
      * @param color the color to create

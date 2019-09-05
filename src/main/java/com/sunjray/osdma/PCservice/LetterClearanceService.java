@@ -8,4 +8,6 @@ public interface LetterClearanceService {
 
 	void save(List<LetterClearance> letterClearances);
 
+	List<LetterClearance> getLetterClearance();
+
 }

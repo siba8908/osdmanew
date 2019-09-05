@@ -14,4 +14,6 @@ public interface PmFundRequestService {
 
 	PmFundRequest updateBill(@Valid PmFundRequest fundRequest);
 
+	List<PmFundRequest> getAllFundRequestForRequisition();
+
 }
