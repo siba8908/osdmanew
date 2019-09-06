@@ -80,6 +80,7 @@ public class LoginSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/am/**").access("hasRole('ROLE_AM')");
 		http.authorizeRequests().antMatchers("/pc/**").access("hasRole('ROLE_PC')");
 		http.authorizeRequests().antMatchers("/wa/**").access("hasRole('ROLE_WA')");
+		http.authorizeRequests().antMatchers("/wb/**").access("hasRole('ROLE_WB')");
 		http.authorizeRequests().antMatchers("/pm/**").access("hasRole('ROLE_PM')");
 		// When the user has logged in as XX.
 		// But access a page that requires role YY,
