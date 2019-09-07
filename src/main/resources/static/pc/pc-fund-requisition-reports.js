@@ -1,7 +1,7 @@
 var _tableFundRequisitionReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/pc/fetch-all-fund-request-for-requisition",
+		url : "fetch-all-fund-request-for-requisition",
 		error : function(e) {
 		},
 		success : function(data) {

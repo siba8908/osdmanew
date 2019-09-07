@@ -3,7 +3,7 @@ var stationTypeOptions;
 $(document).ready(
 		function() {
 			$.ajax({
-				url : "/fetch-station-type",
+				url : "/OSDMA/fetch-station-type",
 				error : function(e) {
 				},
 				success : function(data) {

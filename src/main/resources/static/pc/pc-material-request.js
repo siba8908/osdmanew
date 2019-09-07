@@ -9,7 +9,7 @@ $(document).ready(function() {
 });
 function fetchStationType() {
 	$.ajax({
-		url : "/fetch-station-type",
+		url : "/OSDMA/fetch-station-type",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -28,7 +28,7 @@ function fetchStationType() {
 }
 function fetchWorkStage() {
 	$.ajax({
-		url : "/fetch-work-stage",
+		url : "/OSDMA/fetch-work-stage",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -47,7 +47,7 @@ function fetchWorkStage() {
 }
 function fetchSiteCode() {
 	$.ajax({
-		url : "/fetch-site-code",
+		url : "/OSDMA/fetch-site-code",
 		error : function(e) {
 		},
 		success : function(data) {

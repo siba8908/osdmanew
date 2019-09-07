@@ -8,7 +8,7 @@ var taskOptions;
 var projectOptions;
 $(document).ready(function() {
 	$.ajax({
-	      url: "/fetch-site-code",
+	      url: "/OSDMA/fetch-site-code",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
 	      crossDomain: true
 	  });
 	$.ajax({
-	      url: "/fetch-work-stage",
+	      url: "/OSDMA/fetch-work-stage",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	      crossDomain: true
 	  });
 	$.ajax({
-		url : "/fetch-station-type",
+		url : "/OSDMA/fetch-station-type",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -57,7 +57,7 @@ $(document).ready(function() {
 		crossDomain : true
 	});
 	$.ajax({
-		url : "/fetch-teams",
+		url : "/OSDMA/fetch-teams",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -108,7 +108,7 @@ $(document).ready(function() {
 		crossDomain : true
 	});
 	$.ajax({
-		url : "/fetch-pm-team-task",
+		url : "/OSDMA/fetch-pm-team-task",
 		error : function(e) {
 		},
 		success : function(data) {

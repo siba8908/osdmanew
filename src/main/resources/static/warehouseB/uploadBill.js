@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$.ajax({
-	      url: "api/fetch-site-code",
+	      url: "/OSDMA/fetch-site-code",
 	      error: function (e) {
 	      },
 	      success: function (data) {

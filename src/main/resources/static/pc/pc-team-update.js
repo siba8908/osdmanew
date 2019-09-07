@@ -2,7 +2,7 @@ var _tableAllTeams;
 var _tableTeamMembers;
 $(document).ready(function() {
 	$.ajax({
-		url : "/fetch-teams",
+		url : "/OSDMA/fetch-teams",
 		error : function(e) {
 		},
 		success : function(data) {

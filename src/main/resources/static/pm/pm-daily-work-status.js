@@ -1,7 +1,7 @@
 var _tableWorkStatus;
 $(document).ready(function() {
 	$.ajax({
-		url : "/fetch-work-status",
+		url : "/OSDMA/fetch-work-status",
 		error : function(e) {
 		},
 		success : function(data) {

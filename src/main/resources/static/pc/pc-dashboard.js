@@ -1,7 +1,7 @@
 var _tableDashboardReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/fetch-pm-team-task",
+		url : "/OSDMA/fetch-pm-team-task",
 		error : function(e) {
 		},
 		success : function(data) {

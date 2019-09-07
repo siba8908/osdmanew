@@ -1,7 +1,7 @@
 var _tableLetterOfClearanceReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/pc/fetch-letter-clearance",
+		url : "fetch-letter-clearance",
 		error : function(e) {
 		},
 		success : function(data) {

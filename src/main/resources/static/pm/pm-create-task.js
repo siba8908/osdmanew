@@ -3,7 +3,7 @@ var workStageOptions="";
 var _tableMasterTaskReports;
 $(document).ready(function() {
 	$.ajax({
-	      url: "/fetch-work-stage",
+	      url: "/OSDMA/fetch-work-stage",
 	      error: function (e) {
 	      },
 	      success: function (data) {

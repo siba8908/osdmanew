@@ -1,7 +1,7 @@
 var _tableSiteSurveyReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/pc/fetch-site-survey",
+		url : "fetch-site-survey",
 		error : function(e) {
 		},
 		success : function(data) {

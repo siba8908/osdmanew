@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 function fetchAllTeams() {
 	$.ajax({
-		url : "/fetch-teams",
+		url : "/OSDMA/fetch-teams",
 		error : function(e) {
 		},
 		success : function(data) {

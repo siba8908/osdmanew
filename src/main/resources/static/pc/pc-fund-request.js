@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 function fetchSiteCode() {
 	$.ajax({
-	      url: "/fetch-site-code",
+	      url: "/OSDMA/fetch-site-code",
 	      error: function (e) {
 	      },
 	      success: function (data) {
@@ -30,7 +30,7 @@ function fetchSiteCode() {
 
 function fetchWorkStages() {
 	$.ajax({
-	      url: "/fetch-work-stage",
+	      url: "/OSDMA/fetch-work-stage",
 	      error: function (e) {
 	      },
 	      success: function (data) {

@@ -1,7 +1,7 @@
 var _tableSiteLocationReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "/fetch-site-code",
+		url : "/OSDMA/fetch-site-code",
 		error : function(e) {
 		},
 		success : function(data) {
