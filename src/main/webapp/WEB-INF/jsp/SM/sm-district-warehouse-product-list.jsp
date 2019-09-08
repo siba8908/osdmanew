@@ -6,7 +6,7 @@
 	class="cui-config-borderless cui-menu-left-toggled cui-menu-colorful cui-menu-left-shadow">
 	<div class="cui-initial-loading"></div>
 	<div class="cui-layout cui-layout-has-sider">
-		<jsp:include page="../layout/sm-leftmenu.jsp"></jsp:include>
+		<jsp:include page="../layout/district-warehouse-leftmenu.jsp"></jsp:include>
 
 		<div class="cui-layout">
 			<jsp:include page="../layout/header.jsp"></jsp:include>
@@ -35,93 +35,28 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table class="table table-hover table-bordered ">
+							<table class="table table-hover table-bordered " id = "productsTable">
 								<thead>
 									<tr
-										style="background-color: #09F; text-align: center; font-weight: bold;">
+										style="background-color: #09F; font-weight: bold;">
 										<th>Serial No</th>
-										<th>Issuing Date</th>
+										<th>Product Name</th>
 										<th>Product Code</th>
-										<th>Description</th>
 										<th>Quantity</th>
-										<th>Panchayat Code</th>
-										<th>Vehicle No</th>
-										<th>LR No</th>
+										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td class="txt1">01</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init" /></td>
-										<td>pumim001</td>
-										<td>Description</td>
-										<td class="txt1">5</td>
-										<td class="txt1">2233</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-									</tr>
-									<tr>
-										<td class="txt1">02</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init1"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init1" /></td>
-										<td>pumim002</td>
-										<td>Description</td>
-										<td class="txt1">5</td>
-										<td class="txt1">2733</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-									</tr>
-									<tr>
-										<td class="txt1">03</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init2"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init2" /></td>
-										<td>pumim003</td>
-										<td>Description</td>
-										<td class="txt1">15</td>
-										<td class="txt1">7865</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-									</tr>
-									<tr>
-										<td class="txt1">04</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init3"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init3" /></td>
-										<td>pumim004</td>
-										<td>Description</td>
-										<td class="txt1">12</td>
-										<td class="txt1">4233</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" class="txt1" /></td>
-
-									</tr>
-
 
 								</tbody>
 								<tfoot>
 
 								</tfoot>
 							</table>
-							<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+							<!-- <a href="javascript: void(0);" class="btn btn-sm btn-primary"
 								style="float: right">
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> -->
 						</div>
 					</div>
 				</div>
@@ -180,6 +115,6 @@
 	<script src="../vendors/data-table/buttons.print.min.js"></script>
 	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="../vendors/data-table/datatables-init.js"></script>
-	<script src="../pc/pc-daily-work-status.js"></script>
+	<script src="../dw/product-list.js"></script>
 </body>
 </html>
