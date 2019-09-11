@@ -82,7 +82,7 @@ public class CustomSucessHandler extends SimpleUrlAuthenticationSuccessHandler {
       else if (authority.getAuthority().equals("ROLE_DW")) {
         usrDtl.setRoleDW(true);
         try {
-          redirectStatergy.sendRedirect(request, response, "/dw/dw-dashboard");
+          redirectStatergy.sendRedirect(request, response, "/dw/sm-district-warehouse-product-list");
         }
         catch (Exception e) {
           e.printStackTrace();
