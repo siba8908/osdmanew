@@ -131,7 +131,7 @@
 					<!-- START: page scripts -->
 					<script>
 						$(document).ready(function() {
-							$('.startDate').datetimepicker({
+							$('.startDate,.endDate').datetimepicker({
 								format : 'YYYY-DD-MM'
 							})
 						});

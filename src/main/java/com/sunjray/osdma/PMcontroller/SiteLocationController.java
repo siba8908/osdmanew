@@ -33,4 +33,5 @@ public class SiteLocationController {
 	            .headers(HeaderUtil.createEntityCreationAlert("SiteLocation", "created"))
 	            .body(new AppResponse("success"));
 	}
+	
 }

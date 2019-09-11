@@ -43,4 +43,9 @@ public class FundRequestController {
 	            .headers(HeaderUtil.createEntityCreationAlert("PmFundRequest", "created"))
 	            .body(new AppResponse("success"));
 	}
+	
+	@GetMapping("/fetch-all-fund-request-for-requisition")
+	public List<PmFundRequest> getAllFundRequestForRequisition() {
+		return pmFundRequestRepository.findAll();
+	}
 }
