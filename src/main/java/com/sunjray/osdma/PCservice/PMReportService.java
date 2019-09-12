@@ -1,14 +1,22 @@
 package com.sunjray.osdma.PCservice;
 
 import java.util.List;
-import java.util.Map;
 
 import com.sunjray.osdma.dto.BudgetDto;
+import com.sunjray.osdma.dto.ProjectStatusDto;
 
 public interface PMReportService {
 
-	List<BudgetDto> fetchBudget(int filterType);
+	List<BudgetDto> fetchBudgetBySiteCode(int sitecode);
 
-	Map<String, Integer> fetchProjetProgress(int filterType);
+	List<BudgetDto> fetchBudgetByTask(int task);
+
+	List<BudgetDto> fetchBudgetByProject(int project);
+
+	ProjectStatusDto fetchProjetStatusBySiteCode(int sitecode);
+
+	ProjectStatusDto fetchProjetStatusByTask(int task);
+
+	ProjectStatusDto fetchProjetStatusByProject(int project);
 
 }

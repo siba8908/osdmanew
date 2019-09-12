@@ -1,7 +1,6 @@
 package com.sunjray.osdma.PCserviceimpl;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.sunjray.osdma.PCservice.PMReportService;
 import com.sunjray.osdma.PMdao.PMReportDao;
 import com.sunjray.osdma.dto.BudgetDto;
+import com.sunjray.osdma.dto.ProjectStatusDto;
 
 @Service
 public class PMReportServiceImpl implements PMReportService {
@@ -17,25 +17,33 @@ public class PMReportServiceImpl implements PMReportService {
 	private PMReportDao pMReportDao;
 
 	@Override
-	public List<BudgetDto> fetchBudget(int filterType) {
-		if (filterType == 0) {
-			return pMReportDao.fetchBudgetTaskWise();
-		} else if (filterType == 1) {
-			return pMReportDao.fetchBudgetSiteCodeWise();
-		} else {
-			return pMReportDao.fetchBudgetProjectWise();
-		}
+	public List<BudgetDto> fetchBudgetBySiteCode(int sitecode) {
+		return pMReportDao.fetchBudgetBySiteCode(sitecode);
 	}
 
 	@Override
-	public Map<String, Integer> fetchProjetProgress(int filterType) {
-		if (filterType == 0) {
-			return pMReportDao.fetchProjetProgressTaskWise();
-		} else if (filterType == 1) {
-			return pMReportDao.fetchProjetProgressSiteCodeWise();
-		} else {
-			return pMReportDao.fetchProjetProgressProjectWise();
-		}
+	public List<BudgetDto> fetchBudgetByTask(int task) {
+		return pMReportDao.fetchBudgetByTask(task);
+	}
+
+	@Override
+	public List<BudgetDto> fetchBudgetByProject(int project) {
+		return pMReportDao.fetchBudgetByProject(project);
+	}
+
+	@Override
+	public ProjectStatusDto fetchProjetStatusBySiteCode(int sitecode) {
+		return pMReportDao.fetchProjetStatusBySiteCode(sitecode);
+	}
+
+	@Override
+	public ProjectStatusDto fetchProjetStatusByTask(int task) {
+		return pMReportDao.fetchProjetStatusByTask(task);
+	}
+
+	@Override
+	public ProjectStatusDto fetchProjetStatusByProject(int project) {
+		return pMReportDao.fetchProjetStatusByProject(project);
 	}
 
 }

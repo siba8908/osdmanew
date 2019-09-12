@@ -1,22 +1,22 @@
 package com.sunjray.osdma.PMdao;
 
 import java.util.List;
-import java.util.Map;
 
 import com.sunjray.osdma.dto.BudgetDto;
+import com.sunjray.osdma.dto.ProjectStatusDto;
 
 public interface PMReportDao {
 
-	List<BudgetDto> fetchBudgetTaskWise();
+	List<BudgetDto> fetchBudgetBySiteCode(int sitecode);
 
-	List<BudgetDto> fetchBudgetSiteCodeWise();
+	List<BudgetDto> fetchBudgetByTask(int task);
 
-	List<BudgetDto> fetchBudgetProjectWise();
+	List<BudgetDto> fetchBudgetByProject(int project);
 
-	Map<String, Integer> fetchProjetProgressTaskWise();
+	ProjectStatusDto fetchProjetStatusBySiteCode(int sitecode);
 
-	Map<String, Integer> fetchProjetProgressSiteCodeWise();
+	ProjectStatusDto fetchProjetStatusByTask(int task);
 
-	Map<String, Integer> fetchProjetProgressProjectWise();
+	ProjectStatusDto fetchProjetStatusByProject(int project);
 
 }

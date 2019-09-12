@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("wb")
-public class ProductListViewController {
+public class WBIndexController {
 
 	@RequestMapping(value = "/sm-warehouse-b-product-list", method = RequestMethod.GET)
 	public ModelAndView smWarehouseBProfuctList() {
@@ -17,16 +17,6 @@ public class ProductListViewController {
 	@RequestMapping(value = "/sm-warehouse-b-stocks", method = RequestMethod.GET)
 	public ModelAndView smWarehouseBStockIn() {
 		return new ModelAndView("WAREHOUSE-B/sm-warehouse-b-stocks");
-	}
-
-	@RequestMapping(value = "/wb-dashboard", method = RequestMethod.GET)
-	public ModelAndView smwarehousebdashboard() {
-		return new ModelAndView("WAREHOUSE-B/sm-warehouse-b-dashboard");
-	}
-
-	@RequestMapping(value = "/sm-warehouse-b-material-coding", method = RequestMethod.GET)
-	public ModelAndView smwarehousebmaterialcoding() {
-		return new ModelAndView("WAREHOUSE-B/sm-warehouse-b-material-coding");
 	}
 
 }
