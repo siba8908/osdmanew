@@ -35,19 +35,16 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table id="productListWarehouseB"
+							<table id="warehouseBProductListReportTable"
 								class="table table-hover table-bordered ">
 								<thead>
 									<tr
 										style="background-color: #06F; text-align: center; font-weight: bold;">
-
+										<th>S No.</th>
 										<th>Product Code</th>
 										<th>Product Name</th>
-										<th>Quantity</th>
-
-
 										<th>Status</th>
-
+										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -56,50 +53,10 @@
 
 								</tfoot>
 							</table>
-							<div id="myModal" class="modal fade" role="dialog">
-								<div class="modal-dialog">
-
-									<!-- Modal content-->
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											//
-											<h4 class="modal-title">Modal Header</h4>
-										</div>
-										<div class="modal-body">
-											<input type="text" id="location" />
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">Close</button>
-											<button type="button" onclick="savelocation()"
-												class="btn btn-default">Save</button>
-
-										</div>
-									</div>
-
-								</div>
-							</div>
-							<!-- <a onclick="saveData()" class="btn btn-sm btn-primary"
-										style="float: right">
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> -->
 						</div>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="mb-5"></div>
-					</div>
-				</div>
 			</div>
-			<!-- END: tables/datatables -->
-
-			<!-- START: page scripts -->
-
-			<!-- END: page scripts -->
-
 		</div>
 	</div>
 	<div class="cui-layout-footer">
@@ -137,13 +94,17 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="<c:url value='/vendors/data-table/jszip.min.js'/>"></script>
-	<script src="<c:url value='/vendors/data-table/pdfmake.min.js'/>"></script>
-	<script src="<c:url value='/vendors/data-table/vfs_fonts.js'/>"></script>
-	<script src="<c:url value='/warehouseB/productList.js'/>"></script>
-
-
+	<script src="../vendors/data-table/datatables.min.js"></script>
+	<script src="../vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="../vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/jszip.min.js"></script>
+	<script src="../vendors/data-table/pdfmake.min.js"></script>
+	<script src="../vendors/data-table/vfs_fonts.js"></script>
+	<script src="../vendors/data-table/buttons.html5.min.js"></script>
+	<script src="../vendors/data-table/buttons.print.min.js"></script>
+	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="../vendors/data-table/datatables-init.js"></script>
+	<script src="../warehouseB/sm-warehouse-b-product-list.js"></script>
 </body>
-
 </html>
