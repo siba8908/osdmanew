@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sunjray.osdma.SMservice.LogisticsService;
 import com.sunjray.osdma.dto.ConsignmentLogisticDTO;
+import com.sunjray.osdma.dto.LogisticsReportDTO;
 
 @RestController
 @RequestMapping("lg")
@@ -32,5 +33,10 @@ public class LogisticsController {
 	@GetMapping("/fetch-dashboard-details")
 	public List<ConsignmentLogisticDTO> getAllConsignmentLogisticDashboardDetails() {
 		return logisticsService.findConsignmentDashboardDetails();
+	}
+	
+	@GetMapping("/fetch-in-transit-summary")
+	public List<LogisticsReportDTO> getAllInTransitSummaryDetails() {
+		return logisticsService.getAllInTransitSummaryDetails();
 	}
 }

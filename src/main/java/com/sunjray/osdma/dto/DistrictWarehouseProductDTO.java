@@ -8,6 +8,15 @@ public class DistrictWarehouseProductDTO {
 	private String status;
 	private String storageLocation;
 	private Integer requestId;
+	private String createdDate;
+
+	public String getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
 
 	public String getProductName() {
 		return productName;
