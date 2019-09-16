@@ -1,7 +1,7 @@
-var _tableConsignmentReports;
+var _tableStockInReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "fetch-warehouseB-material-list",
+		url : "fetch-wb-stock-in",
 		error : function(e) {
 		},
 		success : function(data) {
@@ -18,25 +18,23 @@ $(document).ready(function() {
 	});
 });
 function setTableData(dataSet) {
-	if (_tableConsignmentReports) {
-		_tableConsignmentReports.destroy();
-		$('#warehouseBDashboardReportTable tbody').off('click');
+	if (_tableStockInReports) {
+		_tableStockInReports.destroy();
+		$('#warehouseBStockInReportTable tbody').off('click');
 	}
-	_tableConsignmentReports = $('#warehouseyDashboardReportTable').DataTable({
+	_tableStockInReports = $('#warehouseBStockInReportTable').DataTable({
 		data : dataSet,
 		columns : [ {
 			"data" : "serial"
 		}, {
-			"data" : "itemName"
+			"data" : "productCode"
 		}, {
-			"data" : "serialNo"
+			"data" : "masterProduct.productName"
 		}, {
-			"data" : "quantity"
+			"data" : "storageLocation"
 		}, {
-			"data" : "amConsingementTrackC2p.consingementNo"
-		}, {
-			"data" : "amConsingementTrackC2p.actArrivalDate"
+			"data" : "productStatus"
 		} ]
 	});
-
+	
 }

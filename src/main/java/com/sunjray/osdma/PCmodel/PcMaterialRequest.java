@@ -112,7 +112,7 @@ public class PcMaterialRequest implements java.io.Serializable {
 	}
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "status")
+	@Column(name = "approval_status")
 	public Status getStatus() {
 		return status;
 	}

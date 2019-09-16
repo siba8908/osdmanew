@@ -6,6 +6,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.sunjray.osdma.PCenumeration.Status;
 import com.sunjray.osdma.PCmodel.MasterProduct;
 
 /**
@@ -32,7 +35,7 @@ public class QaqcProductCode implements java.io.Serializable {
 	@Column(name = "productcode_id", unique = true, nullable = false)
 	private Integer ProductCodeId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "product_id")
 	private MasterProduct masterProduct;
 
@@ -51,8 +54,9 @@ public class QaqcProductCode implements java.io.Serializable {
 	@Column(name = "imei_no", length = 45)
 	private String imeiNo;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "product_status", length = 45)
-	private String productStatus;
+	private Status productStatus;
 
 	@Column(name = "storage_location", length = 45)
 	private String storageLocation;
@@ -113,11 +117,11 @@ public class QaqcProductCode implements java.io.Serializable {
 		this.imeiNo = imeiNo;
 	}
 
-	public String getProductStatus() {
+	public Status getProductStatus() {
 		return productStatus;
 	}
 
-	public void setProductStatus(String productStatus) {
+	public void setProductStatus(Status productStatus) {
 		this.productStatus = productStatus;
 	}
 

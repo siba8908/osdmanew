@@ -69,13 +69,13 @@
 															placeholder="Enter Project Name" id="projectName0" />
 													</div></td>
 												<td><div class="form-group">
-														<input type="text" class="form-control"
+														<input type="text" class="form-control startDate"
 															placeholder="Select Date" id="satrtDate0"
 															data-toggle="datetimepicker" data-target="#satrtDate0" />
 													</div></td>
 
 												<td><div class="form-group">
-														<input type="text" class="form-control"
+														<input type="text" class="form-control endDate"
 															placeholder="Select Date" id="endDate0"
 															data-toggle="datetimepicker" data-target="#endDate0" />
 													</div></td>
@@ -102,7 +102,8 @@
 									<div class="pull-right">
 
 										<a href="javascript: void(0);"
-											class="btn btn-sm btn-primary ml-10" onclick="saveProject()"> Save </a>
+											class="btn btn-sm btn-primary ml-10" onclick="saveProject()">
+											Save </a>
 									</div>
 								</div>
 							</div>
@@ -154,6 +155,13 @@
 		</div>
 	</div>
 	<script src="../pm/pm-create-project.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.startDate,.endDate').datetimepicker({
+				format : 'YYYY-DD-MM'
+			})
+		});
+	</script>
 
 </body>
 

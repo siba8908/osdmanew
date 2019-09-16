@@ -34,18 +34,18 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table id="stockInWarehouseB"
+							<table id="warehouseBStockInReportTable"
 								class="table table-hover table-bordered ">
 								<thead>
 									<tr
 										style="background-color: #06F; text-align: center; font-weight: bold;">
 
 
-										<th>Product Name</th>
+										<th>S No.</th>
 										<th>Product Code</th>
-
-
+										<th>Product Name</th>
 										<th>Location</th>
+										<th>Status</th>
 
 									</tr>
 								</thead>
@@ -155,11 +155,18 @@
 			</div>
 		</div>
 	</div>
-	<script src="<c:url value='/vendors/data-table/jszip.min.js'/>"></script>
-	<script src="<c:url value='/vendors/data-table/pdfmake.min.js'/>"></script>
-	<script src="<c:url value='/vendors/data-table/vfs_fonts.js'/>"></script>
-	<script src="<c:url value='/warehouseB/stockIn.js'/>"></script>
-
+	<script src="../vendors/data-table/datatables.min.js"></script>
+	<script src="../vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="../vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="../vendors/data-table/jszip.min.js"></script>
+	<script src="../vendors/data-table/pdfmake.min.js"></script>
+	<script src="../vendors/data-table/vfs_fonts.js"></script>
+	<script src="../vendors/data-table/buttons.html5.min.js"></script>
+	<script src="../vendors/data-table/buttons.print.min.js"></script>
+	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="../vendors/data-table/datatables-init.js"></script>
+	<script src="../warehouseB/sm-warehouse-b-stocks.js"></script>
 
 </body>
 

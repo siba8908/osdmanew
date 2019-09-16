@@ -25,22 +25,6 @@
     <div class="cui-menu-left-scroll">
       <ul class="cui-menu-left-list cui-menu-left-list-root">
         <li class="cui-menu-left-item">
-          <a href="wb-dashboard" class="cui-menu-right-action-toggle">
-            <span class="cui-menu-left-icon icmn-cog"></span>
-            <span class="cui-menu-left-title">Dashboard</span>
-          </a>
-        </li>
-        <li class="cui-menu-left-divider">
-          <!-- -->
-        </li>
-        <li class="cui-menu-left-item">
-          <a href="sm-warehouse-b-material-coding">
-            <span class="cui-menu-left-icon icmn-books"></span>
-            <span class="cui-menu-left-title">Material Coding</span>
-          </a>
-        </li>
-        <li class="cui-menu-left-divider"><!-- --></li>
-        <li class="cui-menu-left-item">
           <a href="sm-warehouse-b-product-list">
             <span class="cui-menu-left-icon icmn-books"></span>
             <span class="cui-menu-left-title">Product List</span>
