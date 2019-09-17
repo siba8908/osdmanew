@@ -29,7 +29,7 @@
 						</h3>
 						<br />
 						<h5 style="color: #066; font-family: 'Arial Black', Gadget">
-							<strong>Product List</strong>
+							<strong>Stock Out</strong>
 						</h5>
 						<p class="text-muted">
 							<code></code>
@@ -41,10 +41,16 @@
 									<tr
 										style="background-color: #06F; text-align: center; font-weight: bold;">
 										<th>S No.</th>
+										<th>Request Id</th>
 										<th>Product Code</th>
-										<th>Product Name</th>
+										<th>Quantity</th>
 										<th>Status</th>
 										<th>Storage Location</th>
+										<th>Vehicle No</th>
+										<th>Logistics</th>
+										<th>Ir No</th>
+										<th>Waybill No</th>
+										<th>Expected Arraival</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -106,6 +112,6 @@
 	<script src="../vendors/data-table/buttons.print.min.js"></script>
 	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="../vendors/data-table/datatables-init.js"></script>
-	<script src="../warehouseB/sm-warehouse-b-product-list.js"></script>
+	<script src="../warehouseB/sm-warehouse-b-stock-out.js"></script>
 </body>
 </html>

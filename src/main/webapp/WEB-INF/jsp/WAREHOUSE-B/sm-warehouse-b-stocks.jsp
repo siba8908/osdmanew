@@ -16,99 +16,101 @@
 							·</span> <strong>Store Manager</strong> <small class="text-muted"></small>
 					</span>
 				</nav>
+				<div class="cui-utils-content">
+					<section class="card">
+						<div class="card-header">
+							<span class="cui-utils-title"> <strong> WAREHOUSE
+									B</strong><br>
+								<h3 style="color: #09F; font-family: 'Arial Black', Gadget">
+									<strong>STOCKS</strong>
+								</h3>
+							</span>
+						</div>
+						<div class="card-body" style="background-color: #CCC">
+							<div class="row">
+								<div class="col-lg-12" style="margin-left: 80px;">
 
-				<div class="row"></div>
-				<div class="row"></div>
-				<!-- START: tables/datatables -->
-				<br>
-				<div class="row">
-					<div class="col-lg-10" style="margin-left: 80px;">
-						<h3 class="text-black">
-							<strong>WAREHOUSE-B</strong>
-						</h3>
-						<br />
-						<h5 style="color: #066; font-family: 'Arial Black', Gadget">
-							<strong>Product List</strong>
-						</h5>
-						<p class="text-muted">
-							<code></code>
-						</p>
-						<div class="table-responsive mb-6">
-							<table id="warehouseBStockInReportTable"
-								class="table table-hover table-bordered ">
-								<thead>
-									<tr
-										style="background-color: #06F; text-align: center; font-weight: bold;">
+									<div class="table-responsive mb-6">
+										<table id="warehouseBStockInReportTable"
+											class="table table-hover table-bordered ">
+											<thead>
+												<tr
+													style="background-color: #06F; text-align: center; font-weight: bold;">
 
 
-										<th>S No.</th>
-										<th>Product Code</th>
-										<th>Product Name</th>
-										<th>Location</th>
-										<th>Status</th>
+													<th>S No.</th>
+													<th>Product Code</th>
+													<th>Product Name</th>
+													<th>Location</th>
+													<th>Status</th>
 
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-								<tfoot>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+											<tfoot>
 
-								</tfoot>
-							</table>
-							<div id="myModal" class="modal fade" role="dialog">
-								<div class="modal-dialog">
-
-									<!-- Modal content-->
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<!-- //<h4 class="modal-title">Modal Header</h4> -->
-										</div>
-										<div class="modal-body">
-											<table id="showassembled"
-												class="table table-hover table-bordered ">
-												<thead>
-													<tr
-														style="background-color: #06F; text-align: center; font-weight: bold;">
-
-
-														<th>Product Name</th>
-														<th>Product Code</th>
-
-
-														<th>Location</th>
-
-													</tr>
-												</thead>
-												<tbody>
-												</tbody>
-												<tfoot>
-
-												</tfoot>
-											</table>
-
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">Close</button>
-
-
-										</div>
+											</tfoot>
+										</table>
 									</div>
-
 								</div>
 							</div>
-							<!-- <a onclick="saveData()" class="btn btn-sm btn-primary"
-										style="float: right">
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> -->
 						</div>
-					</div>
-				</div>
+						<div class="card-body" style="background-color: #CCC">
+							<h3 style="color: #09F; font-family: 'Arial Black', Gadget">Stock
+								Out</h3>
+							<div class="row">
+								<div class="col-lg-12" style="margin-left: 80px;">
 
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="mb-5"></div>
+									<div class="table-responsive mb-6">
+										<table class="table table-hover" id="wbMaterialRequestTable">
+											<thead>
+
+												<tr style="background-color: #09F">
+													<th>Serial</th>
+													<th>Station Type</th>
+													<th>Material For</th>
+													<th>Site Code</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+											<tfoot>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="modal fade" id="example1" tabindex="-1" role="dialog"
+					aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header"></div>
+							<div class="modal-body">
+								<table class="table table-hover">
+									<thead>
+
+										<tr style="background-color: #09F">
+											<th>Select</th>
+											<th>Item Name</th>
+											<th>Quantity</th>
+											<th>Product Code</th>
+										</tr>
+									</thead>
+									<tbody class="body-mapped-product-table">
+
+									</tbody>
+									<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+										style="float: right" onclick="saveStockOut()">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -117,7 +119,6 @@
 			<!-- START: page scripts -->
 
 			<!-- END: page scripts -->
-
 		</div>
 	</div>
 	<div class="cui-layout-footer">
@@ -167,7 +168,6 @@
 	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="../vendors/data-table/datatables-init.js"></script>
 	<script src="../warehouseB/sm-warehouse-b-stocks.js"></script>
-
 </body>
 
 </html>

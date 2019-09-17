@@ -152,7 +152,7 @@ function fetchProduct(index) {
 	projProdMap.masterStationType = masterStationType;
 	projProdMap.masterWorkStage = masterWorkStage;
 	$.ajax({
-		url : "fetch-mapped-product",
+		url : "/OSDMA/fetch-mapped-product",
 		data : JSON.stringify(projProdMap),
 		error : function(e) {
 		},
