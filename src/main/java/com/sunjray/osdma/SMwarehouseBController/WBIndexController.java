@@ -17,5 +17,10 @@ public class WBIndexController {
 	public String smWarehouseBStockIn() {
 		return "WAREHOUSE-B/sm-warehouse-b-stocks";
 	}
+	
+	@RequestMapping(value = "/sm-warehouse-b-stock-out", method = RequestMethod.GET)
+	public String smWarehouseBStockOut() {
+		return "WAREHOUSE-B/sm-warehouse-b-stock-out";
+	}
 
 }

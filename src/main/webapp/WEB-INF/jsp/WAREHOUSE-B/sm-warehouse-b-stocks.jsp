@@ -104,11 +104,13 @@
 									<tbody class="body-mapped-product-table">
 
 									</tbody>
-									<a href="javascript: void(0);" class="btn btn-sm btn-primary"
-										style="float: right" onclick="saveStockOut()">
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 								</table>
+							</div>
+							<div class="modal-footer">
+								<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+									style="float: right" onclick="saveStockOut()">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 							</div>
 						</div>
 					</div>

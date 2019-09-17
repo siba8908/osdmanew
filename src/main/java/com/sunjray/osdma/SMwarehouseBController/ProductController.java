@@ -21,7 +21,13 @@ import com.sunjray.osdma.PCenumeration.Status;
 import com.sunjray.osdma.PCmodel.MasterProduct;
 import com.sunjray.osdma.PCmodel.PcMaterialRequest;
 import com.sunjray.osdma.PCrepository.MaterialRequestRepository;
+import com.sunjray.osdma.PMRepository.SiteLocationRepository;
+import com.sunjray.osdma.PMmodel.SiteLocation;
+import com.sunjray.osdma.SMmodel.ConsignmentLogistic;
 import com.sunjray.osdma.SMmodel.QaqcProductCode;
+import com.sunjray.osdma.SMrepository.ConsignmentLogisticRepository;
+import com.sunjray.osdma.SMwarehouseAModel.SerProPersonalDtls;
+import com.sunjray.osdma.SMwarehouseARepository.SerProPersonalDtlsRepository;
 import com.sunjray.osdma.SMwarehouseBModel.WarhousebStockOut;
 import com.sunjray.osdma.SMwarehouseBRepository.QaqcProductCodeRepository;
 import com.sunjray.osdma.SMwarehouseBRepository.WarhousebStockOutRepository;
@@ -36,18 +42,27 @@ public class ProductController {
 
 	@Resource
 	private MaterialRequestRepository materialRequestRepository;
-	
+
 	@Resource
 	private WarhousebStockOutRepository warhousebStockOutRepository;
+
+	@Autowired
+	private SiteLocationRepository siteLocationRepository;
+	
+	@Autowired
+	private SerProPersonalDtlsRepository serProPersonalDtlsRepository;
+	
+	@Autowired
+	private ConsignmentLogisticRepository consignmentLogisticRepository;
 
 	@GetMapping("/fetch-product-list")
 	public List<QaqcProductCode> getAllProducts() {
 		return qaqcProductCodeRepository.findByProductStatus(Status.INTRANSIT);
 	}
-	
+
 	@GetMapping("/fetch-product-list/{productId}")
 	public List<QaqcProductCode> getAllProducts(@PathVariable int productId) {
-		MasterProduct masterProduct=new MasterProduct();
+		MasterProduct masterProduct = new MasterProduct();
 		masterProduct.setProductId(productId);
 		return qaqcProductCodeRepository.findByMasterProduct(masterProduct);
 	}
@@ -71,7 +86,7 @@ public class ProductController {
 	public List<PcMaterialRequest> fetchMaterialRequest() {
 		return materialRequestRepository.findByStatus(Status.APPROVED);
 	}
-	
+
 	@PostMapping("/save-stock-out")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<AppResponse> saveStockOut(@RequestBody List<WarhousebStockOut> warhousebStockOut)
@@ -79,6 +94,31 @@ public class ProductController {
 		warhousebStockOutRepository.saveAll(warhousebStockOut);
 		return ResponseEntity.created(new URI("/wb/save-stock-out"))
 				.headers(HeaderUtil.createEntityCreationAlert("saveStockOut", "created"))
+				.body(new AppResponse("success"));
+	}
+
+	@GetMapping("/fetch-stock-out")
+	public List<WarhousebStockOut> getAllStockOut() {
+		return warhousebStockOutRepository.findAll();
+	}
+
+	@GetMapping("/fetch-site-location")
+	public List<SiteLocation> getAllSiteLocation() {
+		return siteLocationRepository.findAll();
+	}
+	
+	@GetMapping("/fetch-service-provider")
+	public List<SerProPersonalDtls> getAllSerProPersonalDtls() {
+		return serProPersonalDtlsRepository.findAll();
+	}
+	
+	@PostMapping("/save-stock-out-logistics")
+	@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity<AppResponse> saveStockOutLogistics(@RequestBody ConsignmentLogistic consignmentLogistic)
+			throws URISyntaxException {
+		consignmentLogisticRepository.save(consignmentLogistic);
+		return ResponseEntity.created(new URI("/wb/save-stock-out-logistics"))
+				.headers(HeaderUtil.createEntityCreationAlert("saveStockOutLogistics", "created"))
 				.body(new AppResponse("success"));
 	}
 
