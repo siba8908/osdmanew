@@ -21,4 +21,9 @@ public class LogisticsIndexController {
 	String smLogisticStatus() {
 		return "SM/sm-logistics-status";
 	}
+	
+	@RequestMapping("/logistics-intransit-summary")
+	String intransitSummary() {
+		return "SM/sm-logistics-intransit-summary";
+	}
 }
