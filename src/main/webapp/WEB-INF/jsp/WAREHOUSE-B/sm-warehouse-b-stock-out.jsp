@@ -35,7 +35,7 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table id="warehouseBProductListReportTable"
+							<table id="warehouseBStockOutReportTable"
 								class="table table-hover table-bordered ">
 								<thead>
 									<tr
@@ -45,12 +45,6 @@
 										<th>Product Code</th>
 										<th>Quantity</th>
 										<th>Status</th>
-										<th>Storage Location</th>
-										<th>Vehicle No</th>
-										<th>Logistics</th>
-										<th>Ir No</th>
-										<th>Waybill No</th>
-										<th>Expected Arraival</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -60,6 +54,56 @@
 
 								</tfoot>
 							</table>
+							<div class="modal fade" id="example1" tabindex="-1" role="dialog"
+								aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content" style="width: 138%">
+										<div class="modal-header"></div>
+										<div class="modal-body">
+											<table class="table table-hover">
+												<thead>
+
+													<tr style="background-color: #09F">
+														<th>Storage Location</th>
+														<th>Vehicle No</th>
+														<th>Logistics</th>
+														<th>Ir No</th>
+														<th>Waybill No</th>
+														<th>Expected Arraival</th>
+													</tr>
+													<tr>
+														<td><select class="form-control"
+															name="storage-location" id="storageLocation">
+																<option value="">Select Location</option>
+														</select></td>
+														<td><input type="text" class="form-control"
+															id="vehicleNo" placeholder="Enter Vehicle Number"></td>
+														<td><select name="logistics" class="form-control"
+															id="logistics">
+																<option value="">Select Logistics</option>
+														</select></td>
+														<td><input type="text" class="form-control" id="irNo"
+															placeholder="Enter Ir Number"></td>
+														<td><input type="text" class="form-control"
+															id="waybillNo" placeholder="Enter Waybill Number"></td>
+														<td><div class="form-group"><input type="text" class="form-control"
+															id="expectedDate" placeholder="Enter Arrival Date" data-toggle="datetimepicker" data-target="#expectedDate"></div></td>
+													</tr>
+												</thead>
+												<tbody class="body-mapped-product-table">
+
+												</tbody>
+											</table>
+										</div>
+										<div class="modal-footer">
+											<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+												style="float: left" onclick="saveStockOut()">
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -113,5 +157,12 @@
 	<script src="../vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="../vendors/data-table/datatables-init.js"></script>
 	<script src="../warehouseB/sm-warehouse-b-stock-out.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#expectedDate').datetimepicker({
+				format : 'YYYY-DD-MM'
+			})
+		});
+	</script>
 </body>
 </html>

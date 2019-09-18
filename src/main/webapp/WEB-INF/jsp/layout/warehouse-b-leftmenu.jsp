@@ -38,6 +38,13 @@
           </a>
         </li>
         
+        <li class="cui-menu-left-item">
+          <a href="sm-warehouse-b-stock-out">
+            <span class="cui-menu-left-icon icmn-books"></span>
+            <span class="cui-menu-left-title">Stock Out</span>
+          </a>
+        </li>
+        
         <li class="cui-menu-left-divider">
           <!-- -->
         </li>

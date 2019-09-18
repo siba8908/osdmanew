@@ -49,7 +49,7 @@ public class SiteLocation implements java.io.Serializable {
 		this.siteLocationId = siteLocationId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JsonIgnoreProperties("siteLocation")
 	@JoinColumn(name = "sitecode_id")
 	public Sitecode getSitecode() {
