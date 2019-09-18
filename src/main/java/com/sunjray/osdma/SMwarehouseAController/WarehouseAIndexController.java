@@ -33,5 +33,20 @@ public class WarehouseAIndexController {
 	ModelAndView smWarehouseAStocks() {
 		return new ModelAndView ("WAREHOUSE-A/sm-warehouse-a-stocks");
 	}
+	
+	@RequestMapping("/warehouse-a-materials-report")
+	ModelAndView smWarehouseAMaterialsReport() {
+		return new ModelAndView ("WAREHOUSE-A/sm-wa-materials-report");
+	}
+	
+	@RequestMapping("/warehouse-a-stock-in-report")
+	ModelAndView smWarehouseAStockInReport() {
+		return new ModelAndView ("WAREHOUSE-A/sm-wa-stock-in-report");
+	}
+	
+	@RequestMapping("/warehouse-a-stock-out-report")
+	ModelAndView smWarehouseAStockOutReport() {
+		return new ModelAndView ("WAREHOUSE-A/sm-wa-stock-out-report");
+	}
 
 }

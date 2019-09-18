@@ -1,6 +1,6 @@
 package com.sunjray.osdma.dto;
 
-public class DistrictWarehouseProductDTO {
+public class WarehouseProductDTO {
 	private Integer stockOutId;
 	private String productName;
 	private String productCode;

@@ -67,8 +67,26 @@
 				<li class="cui-menu-left-divider">
 					<!-- -->
 				</li>
-
-
+				<li class="cui-menu-left-item cui-menu-left-submenu"><a
+					href="#reportSubmenu" data-toggle="collapse" aria-expanded="false"
+					class="dropdown-toggle"><span
+						class="cui-menu-left-icon icmn-file-text"></span><span
+						class="cui-menu-left-title"> Reports </span> </a>
+					<ul class="collapse list-unstyled" id="reportSubmenu">
+						<li class="cui-menu-left-item"><a
+							href="warehouse-a-materials-report"><span
+								class="cui-menu-left-icon icmn-books"></span> <span
+								class="cui-menu-left-title">Material List</span></a></li>
+						<li class="cui-menu-left-item"><a
+							href="warehouse-a-stock-in-report"><span
+								class="cui-menu-left-icon icmn-books"></span> <span
+								class="cui-menu-left-title">Stock In</span></a></li>
+						<li class="cui-menu-left-item"><a
+							href="warehouse-a-stock-out-report"><span
+								class="cui-menu-left-icon icmn-books"></span> <span
+								class="cui-menu-left-title">Stock Out</span></a></li>
+					</ul></li>
+				<li class="cui-menu-left-divider"></li>
 			</ul>
 		</div>
 	</div>

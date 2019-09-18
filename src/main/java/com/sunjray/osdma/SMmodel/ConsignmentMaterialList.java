@@ -51,7 +51,7 @@ public class ConsignmentMaterialList implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "consinment_id")
+	@JoinColumn(name = "consignment_id")
 	public ConsingementTrackC2p getConsingementTrackC2p() {
 		return this.consingementTrackC2p;
 	}

@@ -2,21 +2,21 @@ package com.sunjray.osdma.SMservice;
 
 import java.util.List;
 
-import com.sunjray.osdma.dto.DistrictWarehouseProductDTO;
+import com.sunjray.osdma.dto.WarehouseProductDTO;
 import com.sunjray.osdma.dto.DwStockOutReportDTO;
 
 public interface DistrictWarehouseService {
 
-	List<DistrictWarehouseProductDTO> getAllProductList();
+	List<WarehouseProductDTO> getAllProductList();
 
-	List<DistrictWarehouseProductDTO> getStockOutProductList();
+	List<WarehouseProductDTO> getStockOutProductList();
 
-	void addStorageLocation(DistrictWarehouseProductDTO productDTO);
+	void addStorageLocation(WarehouseProductDTO productDTO);
 
-	List<DistrictWarehouseProductDTO> getAllProductReportList();
+	List<WarehouseProductDTO> getAllProductReportList();
 
 	List<DwStockOutReportDTO> getAllStockOutReportList();
 
-	List<DistrictWarehouseProductDTO> getAllStockInProductsReport();
+	List<WarehouseProductDTO> getAllStockInProductsReport();
 
 }

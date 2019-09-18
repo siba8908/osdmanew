@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sunjray.osdma.SMdao.DistrictWarehouseDao;
-import com.sunjray.osdma.dto.DistrictWarehouseProductDTO;
+import com.sunjray.osdma.dto.WarehouseProductDTO;
 import com.sunjray.osdma.dto.DwStockOutReportDTO;
 import com.sunjray.osdma.util.CommonUtil;
 
@@ -34,13 +34,13 @@ public class DistrictWarehouseDaoImpl implements DistrictWarehouseDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<DistrictWarehouseProductDTO> findAllProductList() {
-		List<DistrictWarehouseProductDTO> productsList = new ArrayList<>();
+	public List<WarehouseProductDTO> findAllProductList() {
+		List<WarehouseProductDTO> productsList = new ArrayList<>();
 		List<Object[]> results = entityManager.createNativeQuery(FETCH_PRODUCT_LIST).getResultList();
 
 		results.stream().forEach(record -> {
 
-			DistrictWarehouseProductDTO product = new DistrictWarehouseProductDTO();
+			WarehouseProductDTO product = new WarehouseProductDTO();
 			product.setProductName(CommonUtil.checkNullValue(record[0]));
 			product.setProductCode(CommonUtil.checkNullValue(record[1]));
 			product.setStatus(CommonUtil.checkNullValue(record[2]));
@@ -53,13 +53,13 @@ public class DistrictWarehouseDaoImpl implements DistrictWarehouseDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<DistrictWarehouseProductDTO> findStockOutProductList() {
-		List<DistrictWarehouseProductDTO> productsList = new ArrayList<>();
+	public List<WarehouseProductDTO> findStockOutProductList() {
+		List<WarehouseProductDTO> productsList = new ArrayList<>();
 		List<Object[]> results = entityManager.createNativeQuery(FETCH_STOCK_OUT_PRODUCT_LIST).getResultList();
 
 		results.stream().forEach(record -> {
 
-			DistrictWarehouseProductDTO product = new DistrictWarehouseProductDTO();
+			WarehouseProductDTO product = new WarehouseProductDTO();
 			product.setProductName(CommonUtil.checkNullValue(record[0]));
 			product.setProductCode(CommonUtil.checkNullValue(record[1]));
 			product.setRequestId((Integer)record[2]);
@@ -74,20 +74,20 @@ public class DistrictWarehouseDaoImpl implements DistrictWarehouseDao {
 
 	@Override
 	@Transactional
-	public Boolean addStorageLocation(DistrictWarehouseProductDTO productDTO) {
+	public Boolean addStorageLocation(WarehouseProductDTO productDTO) {
 		int result = entityManager.createNativeQuery(UPDATE_STORAGE_LOCATION).setParameter(1, productDTO.getStorageLocation()).setParameter(2, productDTO.getStockOutId()).executeUpdate();
 		return result == 1;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<DistrictWarehouseProductDTO> getAllProductReportList() {
-		List<DistrictWarehouseProductDTO> productsList = new ArrayList<>();
+	public List<WarehouseProductDTO> getAllProductReportList() {
+		List<WarehouseProductDTO> productsList = new ArrayList<>();
 		List<Object[]> results = entityManager.createNativeQuery(FETCH_PRODUCT_REPORT_LIST).getResultList();
 
 		results.stream().forEach(record -> {
 
-			DistrictWarehouseProductDTO product = new DistrictWarehouseProductDTO();
+			WarehouseProductDTO product = new WarehouseProductDTO();
 			product.setProductName(CommonUtil.checkNullValue(record[0]));
 			product.setProductCode(CommonUtil.checkNullValue(record[1]));
 			product.setStorageLocation(CommonUtil.checkNullValue(record[2]));
@@ -121,13 +121,13 @@ public class DistrictWarehouseDaoImpl implements DistrictWarehouseDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<DistrictWarehouseProductDTO> getAllStockInProductsReport() {
-		List<DistrictWarehouseProductDTO> productsList = new ArrayList<>();
+	public List<WarehouseProductDTO> getAllStockInProductsReport() {
+		List<WarehouseProductDTO> productsList = new ArrayList<>();
 		List<Object[]> results = entityManager.createNativeQuery(FETCH_STOCK_IN_PRODUCT_REPORT).getResultList();
 
 		results.stream().forEach(record -> {
 
-			DistrictWarehouseProductDTO product = new DistrictWarehouseProductDTO();
+			WarehouseProductDTO product = new WarehouseProductDTO();
 			
 			product.setProductCode(CommonUtil.checkNullValue(record[0]));
 			product.setProductName(CommonUtil.checkNullValue(record[1]));

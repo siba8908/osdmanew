@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sunjray.osdma.SMservice.DistrictWarehouseService;
 import com.sunjray.osdma.dto.AppResponse;
-import com.sunjray.osdma.dto.DistrictWarehouseProductDTO;
+import com.sunjray.osdma.dto.WarehouseProductDTO;
 import com.sunjray.osdma.dto.DwStockOutReportDTO;
 
 @RestController
@@ -24,24 +24,24 @@ public class DistrictWarehouseController {
 	DistrictWarehouseService districtWarehouseService;
 	
 	@GetMapping("/fetch-products")
-	public List<DistrictWarehouseProductDTO> getAllProductList() {
+	public List<WarehouseProductDTO> getAllProductList() {
 		return districtWarehouseService.getAllProductList();
 	}
 	
 	
 	@GetMapping("/fetch-stockout-products")
-	public List<DistrictWarehouseProductDTO> getStockOutProductList() {
+	public List<WarehouseProductDTO> getStockOutProductList() {
 		return districtWarehouseService.getStockOutProductList();
 	}
 	
 	@PostMapping("/add-storage-location")
-	public ResponseEntity<AppResponse> addStorageLocation(@RequestBody DistrictWarehouseProductDTO productDTO) {
+	public ResponseEntity<AppResponse> addStorageLocation(@RequestBody WarehouseProductDTO productDTO) {
 		districtWarehouseService.addStorageLocation(productDTO);
 		return ResponseEntity.ok().body(new AppResponse("success"));
 	}
 	
 	@GetMapping("/fetch-products-report")
-	public List<DistrictWarehouseProductDTO> getAllProductReportList() {
+	public List<WarehouseProductDTO> getAllProductReportList() {
 		return districtWarehouseService.getAllProductReportList();
 	}
 	
@@ -51,7 +51,7 @@ public class DistrictWarehouseController {
 	}
 	
 	@GetMapping("/fetch-stock-in-report")
-	public List<DistrictWarehouseProductDTO> getAllStockInProductsReport() {
+	public List<WarehouseProductDTO> getAllStockInProductsReport() {
 		return districtWarehouseService.getAllStockInProductsReport();
 	}
 }

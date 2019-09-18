@@ -2,21 +2,21 @@ package com.sunjray.osdma.SMdao;
 
 import java.util.List;
 
-import com.sunjray.osdma.dto.DistrictWarehouseProductDTO;
+import com.sunjray.osdma.dto.WarehouseProductDTO;
 import com.sunjray.osdma.dto.DwStockOutReportDTO;
 
 public interface DistrictWarehouseDao {
 
-	List<DistrictWarehouseProductDTO> findAllProductList();
+	List<WarehouseProductDTO> findAllProductList();
 
-	List<DistrictWarehouseProductDTO> findStockOutProductList();
+	List<WarehouseProductDTO> findStockOutProductList();
 
-	Boolean addStorageLocation(DistrictWarehouseProductDTO productDTO);
+	Boolean addStorageLocation(WarehouseProductDTO productDTO);
 
-	List<DistrictWarehouseProductDTO> getAllProductReportList();
+	List<WarehouseProductDTO> getAllProductReportList();
 
 	List<DwStockOutReportDTO> getAllStockOutReportList();
 
-	List<DistrictWarehouseProductDTO> getAllStockInProductsReport();
+	List<WarehouseProductDTO> getAllStockInProductsReport();
 
 }

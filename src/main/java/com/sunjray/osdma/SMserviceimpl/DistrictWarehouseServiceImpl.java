@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sunjray.osdma.SMdao.DistrictWarehouseDao;
 import com.sunjray.osdma.SMservice.DistrictWarehouseService;
-import com.sunjray.osdma.dto.DistrictWarehouseProductDTO;
+import com.sunjray.osdma.dto.WarehouseProductDTO;
 import com.sunjray.osdma.dto.DwStockOutReportDTO;
 
 @Service
@@ -18,23 +18,23 @@ public class DistrictWarehouseServiceImpl implements DistrictWarehouseService {
 	DistrictWarehouseDao districtWarehouseDao;
 
 	@Override
-	public List<DistrictWarehouseProductDTO> getAllProductList() {
+	public List<WarehouseProductDTO> getAllProductList() {
 		return districtWarehouseDao.findAllProductList();
 	}
 
 	@Override
-	public List<DistrictWarehouseProductDTO> getStockOutProductList() {
+	public List<WarehouseProductDTO> getStockOutProductList() {
 		return districtWarehouseDao.findStockOutProductList();
 	}
 
 	@Override
-	public void addStorageLocation(DistrictWarehouseProductDTO productDTO) {
+	public void addStorageLocation(WarehouseProductDTO productDTO) {
 		 districtWarehouseDao.addStorageLocation(productDTO);
 		
 	}
 
 	@Override
-	public List<DistrictWarehouseProductDTO> getAllProductReportList() {
+	public List<WarehouseProductDTO> getAllProductReportList() {
 		return districtWarehouseDao.getAllProductReportList();
 	}
 
@@ -44,7 +44,7 @@ public class DistrictWarehouseServiceImpl implements DistrictWarehouseService {
 	}
 
 	@Override
-	public List<DistrictWarehouseProductDTO> getAllStockInProductsReport() {
+	public List<WarehouseProductDTO> getAllStockInProductsReport() {
 		return districtWarehouseDao.getAllStockInProductsReport();
 	}
 
