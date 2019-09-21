@@ -55,7 +55,7 @@
 								class="cui-menu-left-title">Stock Out</span></a></li>
 					</ul></li>
 
-				<li class="cui-menu-left-divider">
+				<li class="cui-menu-left-divider"></li>
 			</ul>
 		</div>
 	</div>

@@ -31,7 +31,7 @@
 									</h3>
 									<br />
 									<h4 style="color: 066; font-family: 'Arial Black', Gadget">
-										<strong>Stock-In Report</strong>
+										<strong>Stock-Out Report</strong>
 									</h4>
 									<p class="text-muted">
 										<code></code>

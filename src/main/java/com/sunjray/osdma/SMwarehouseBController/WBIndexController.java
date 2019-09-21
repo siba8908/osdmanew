@@ -22,5 +22,20 @@ public class WBIndexController {
 	public String smWarehouseBStockOut() {
 		return "WAREHOUSE-B/sm-warehouse-b-stock-out";
 	}
+	
+	@RequestMapping(value = "/warehouse-b-products-report", method = RequestMethod.GET)
+	public String smWarehouseBProductsReport() {
+		return "WAREHOUSE-B/sm-wb-products-report";
+	}
+	
+	@RequestMapping(value = "/warehouse-b-stock-in-report", method = RequestMethod.GET)
+	public String smWarehouseBStockInReport() {
+		return "WAREHOUSE-B/sm-wb-stock-in-report";
+	}
+	
+	@RequestMapping(value = "/warehouse-b-stock-out-report", method = RequestMethod.GET)
+	public String smWarehouseBStockOutReport() {
+		return "WAREHOUSE-B/sm-wb-stock-out-report";
+	}
 
 }

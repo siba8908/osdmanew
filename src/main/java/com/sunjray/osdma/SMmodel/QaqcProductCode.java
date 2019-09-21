@@ -15,6 +15,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.sunjray.osdma.PCenumeration.Status;
 import com.sunjray.osdma.PCmodel.MasterProduct;
 
@@ -42,6 +44,7 @@ public class QaqcProductCode implements java.io.Serializable {
 	@Column(name = "product_code_gen", length = 45)
 	private String productCode;
 
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Column(name = "created_date", length = 19)
 	private Date createdDate;
 
