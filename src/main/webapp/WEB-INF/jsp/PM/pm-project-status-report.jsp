@@ -14,32 +14,50 @@
 				<nav class="cui-breadcrumbs cui-breadcrumbs-bg">
 					<div class="pull-right"></div>
 					<span class="font-size-18 d-block"> <span class="text-muted">Home
-							·</span> <strong>Project co-orinator </strong> <small
-						class="text-muted"></small>
+					</span> <strong>Project co-orinator </strong> <small class="text-muted"></small>
 					</span>
-					<div class="row">
-						<div class="col-lg-3 col-xs-3 col-sm-3">
-							<select class="form-control sidecode" id="sitecode">
-								<option value="" selected>Select Side Code</option>
-							</select>
-							<button class="form-control" onclick="fetchReportBySiteCode()">Search</button>
+					<div class="row"  style = "margin :10px">
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-8">
+									<select class="form-control sidecode" id="sitecode">
+										<option value="" selected>Select Side Code</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+									<button class="btn btn-primary"
+										onclick="fetchReportBySiteCode()">Search</button>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-6 col-xs-3 col-sm-3">
-							<select class="form-control task" id="task">
-								<option value="" selected>Select Task</option>
-							</select>
-							<button class="form-control" onclick="fetchReportByTask()">Search</button>
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-8">
+									<select class="form-control task" id="task">
+										<option value="" selected>Select Task</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+									<button class="btn btn-primary" onclick="fetchReportByTask()">Search</button>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-6 col-xs-3 col-sm-3">
-							<select class="form-control project" id="project">
-								<option value="" selected>Select Project</option>
-							</select>
-							<button class="form-control" onclick="fetchReportByProject()">Search</button>
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-8">
+									<select class="form-control project" id="project">
+										<option value="" selected>Select Project</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+									<button class="btn btn-primary"
+										onclick="fetchReportByProject()">Search</button>
+								</div>
+							</div>
 						</div>
-
 					</div>
 				</nav>
-				<div class="row">
+				<div class="row" style = "margin :10px">
 					<div class="col-lg-6 col-xs-6 col-sm-3">
 						<div class="card-deck">
 							<div class="card">
