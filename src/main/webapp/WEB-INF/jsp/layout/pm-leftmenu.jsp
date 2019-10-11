@@ -87,6 +87,8 @@
 							href="pm-material-request-report">Material Request</a></li>
 						<li class="cui-menu-left-item"><a
 							href="pm-fund-requisition-reports">Fund requisition</a></li>
+							<li class="cui-menu-left-item"><a
+							href="hr-attendance">Attendance</a></li>
 					</ul></li>
 				<li class="cui-menu-left-divider">
 					<!-- -->

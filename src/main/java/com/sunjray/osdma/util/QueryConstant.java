@@ -201,5 +201,18 @@ public class QueryConstant
 			public static final String Actual_cost="select sum(m.actual_cost) AS actual_cost,s.stage_name,o.site_code from t_os_pm_team_task_map m left join t_os_master_task t on m.task_id=t.task_id left join t_os_master_work_stage s on t.work_stage= s.stage_id left join t_os_sitecode o on o.sitecode_id=m.sitecode_id  where m.sitecode_id=? group by s.stage_name";
 
 			public static final String DISPLAY_SiteCode="select sitecode_id,site_code from t_os_sitecode";
+			public static final String GET_EMPLOYEE_CODES = "SELECT employee_id as employeeCode from t_os_hr_emp_personal_dtls";;
+			public static final String DISPLAY_ATTENDANCE = "SELECT employee_code,GROUP_CONCAT(if(DAY(`attendee_date`) = 1, `status`, NULL)) AS 'day1',GROUP_CONCAT(if(DAY(`attendee_date`) = 2, `status`, NULL)) AS 'day2',GROUP_CONCAT(if(DAY(`attendee_date`) = 3, `status`, NULL)) AS 'day3',\r\n" + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 4, `status`, NULL)) AS 'day4',GROUP_CONCAT(if(DAY(`attendee_date`) = 5, `status`, NULL)) AS 'day5',GROUP_CONCAT(if(DAY(`attendee_date`) = 6, `status`, NULL)) AS 'day6'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 7, `status`, NULL)) AS 'day7',GROUP_CONCAT(if(DAY(`attendee_date`) = 8, `status`, NULL)) AS 'day8',GROUP_CONCAT(if(DAY(`attendee_date`) = 9, `status`, NULL)) AS 'day9'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 10, `status`, NULL)) AS 'day10',GROUP_CONCAT(if(DAY(`attendee_date`) = 11, `status`, NULL)) AS 'day11',GROUP_CONCAT(if(DAY(`attendee_date`) = 12, `status`, NULL)) AS 'day12'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 13, `status`, NULL)) AS 'day13',GROUP_CONCAT(if(DAY(`attendee_date`) = 14, `status`, NULL)) AS 'day14',GROUP_CONCAT(if(DAY(`attendee_date`) = 15, `status`, NULL)) AS 'day15'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 16, `status`, NULL)) AS 'day16',GROUP_CONCAT(if(DAY(`attendee_date`) = 17, `status`, NULL)) AS 'day17',GROUP_CONCAT(if(DAY(`attendee_date`) = 18, `status`, NULL)) AS 'day18'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 19, `status`, NULL)) AS 'day19',GROUP_CONCAT(if(DAY(`attendee_date`) = 20, `status`, NULL)) AS 'day20',GROUP_CONCAT(if(DAY(`attendee_date`) = 21, `status`, NULL)) AS 'day21'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 22, `status`, NULL)) AS 'day22',GROUP_CONCAT(if(DAY(`attendee_date`) = 23, `status`, NULL)) AS 'day23',GROUP_CONCAT(if(DAY(`attendee_date`) = 24, `status`, NULL)) AS 'day24'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 25, `status`, NULL)) AS 'day25',GROUP_CONCAT(if(DAY(`attendee_date`) = 26, `status`, NULL)) AS 'day26',GROUP_CONCAT(if(DAY(`attendee_date`) = 27, `status`, NULL)) AS 'day27'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 28, `status`, NULL)) AS 'day28',GROUP_CONCAT(if(DAY(`attendee_date`) = 29, `status`, NULL)) AS 'day29',GROUP_CONCAT(if(DAY(`attendee_date`) = 30, `status`, NULL)) AS 'day30'," + 
+					"GROUP_CONCAT(if(DAY(`attendee_date`) = 31, `status`, NULL)) AS 'day31',COUNT(if(`status`='present', `status`, NULL)) AS 'totalP' FROM `t_os_attendance` WHERE MONTH(attendee_date) = ? AND YEAR(attendee_date) = ? " + 
+					"GROUP BY employee_code";
 }
 

@@ -101,4 +101,9 @@ public class PMIndexController {
 		return new ModelAndView("PM/pm-material-request-report");
 	}
 	
+	@RequestMapping(value = "/hr-attendance", method = RequestMethod.GET)
+	public ModelAndView hrattendance() {
+		return new ModelAndView("PM/hr-attendance");
+	}
+	
 }

@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$.each(data, function(index) {
 				this.serialNo = index + 1;
 				this.checkBox="<input type='checkbox' name='fund-requistion' /> <span class='cui-utils-control-indicator'></span>";
-				this.date="<input type='text' class='form-control' placeholder='Select Date' id='approvalDate"+index + 1+"' data-toggle='datetimepicker' data-target='#datepicker-only-init2' />";
+				//this.date="<input type='text' class='form-control' placeholder='Select Date' id='approvalDate"+index + 1+"' data-toggle='datetimepicker' data-target='#datepicker-only-init2' />";
 				this.appAmount="<input type='number' class='form-control' id='approvedAmount"+index + 1+"'>";											
 			});
 			setTableData(data);
@@ -73,7 +73,7 @@ function updatePendindingFundRequistion(){
 	$.each($("input[name='fund-requistion']:checked"), function() {
 		 var currentRowData = _tableFundRequistion.row($(this).parents('tr')).data();
 		 currentRowData.approvedAmount=$("#approvedAmount").val();
-		 currentRowData.approvalDate=$("#approvalDate").val();
+		// currentRowData.approvalDate=$("#approvalDate").val();
 		 currentRowData.status="APPROVED";
 		 fundRequisitionList.push(currentRowData);
 	});

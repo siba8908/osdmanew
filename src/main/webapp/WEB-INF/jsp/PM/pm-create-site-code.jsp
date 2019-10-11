@@ -56,10 +56,10 @@
 														</select>
 													</div>
 												</td>
+												<td><input type="text" placeholder="Enter Site Code"
+													class="form-control siteCode" id="siteCode0"></td>
 												<td><input type="text" placeholder="Enter Site Name"
 													class="form-control" id="siteName0"></td>
-												<td><input type="text" placeholder="Enter Site Code"
-													class="form-control" id="siteCode0"></td>
 												<td><button class="fa fa-plus btnAdd"
 														style="height: 30px"></button></td>
 											</tr>

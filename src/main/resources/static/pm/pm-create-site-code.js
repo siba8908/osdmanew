@@ -36,6 +36,10 @@ $(document).ready(function() {
 		cache : false,
 		crossDomain : true
 	});
+	$(".siteCode").keyup(function() {
+        var val = $(this).val()
+        $(this).val(val.toUpperCase())
+    })
 });
 $(".btnAdd").click(function(){
 	var element="<tr style='color: #06C; text-align: center'>"
@@ -45,7 +49,7 @@ $(".btnAdd").click(function(){
 				+"<select class='form-control' id='stationType"+i+"'>"
 				+"<option value=''>Select Station Type</option></select>"
 				+"</div></td>"
-				+"<td><input type='text' placeholder='Enter Site Code' class='form-control' id='siteCode"+i+"'></td>"
+				+"<td><input type='text' placeholder='Enter Site Code' class='form-control siteCode' id='siteCode"+i+"'></td>"
 				+"<td><input type='text' placeholder='Enter Site Name' class='form-control' id='siteName"+i+"'></td>"
 				+"<td><button class='fa fa-minus btnMinus' style='height: 30px'></button></td></tr>";
 	
