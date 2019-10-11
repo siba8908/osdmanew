@@ -24,6 +24,10 @@ function setTableData(dataSet) {
 	}
 	_tableMaterialRequestReports = $('#pcMaterialRequestTable').DataTable({
 		data : dataSet,
+		dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
 		columns : [ {
 			"data" : "serialNo"
 		}, {
@@ -34,6 +38,9 @@ function setTableData(dataSet) {
 			"data" : "siteCode.siteCode"
 		}, {
 			"data" : "status"
-		} ]
+		} ],
+		"columnDefs": [
+            {"className": "dt-center", "targets": "_all"}
+        ]
 	});
 }

@@ -35,6 +35,7 @@
 									<tr style="background-color: #09F">
 										<th></th>
 										<th>Sl No.</th>
+										<th>Date</th>
 										<th>Site Code</th>
 										<th>Type of Work</th>
 										<th>Amount Raised</th>

@@ -39,6 +39,7 @@ $(document).ready(function() {
 	});
 });
 function setTableData(dataSet) {
+	console.log(dataSet);
 	if (_tableFundRequistion) {
 		_tableFundRequistion.destroy();
 		$('#pendingFundRequistionTable tbody').off('click');
@@ -50,7 +51,7 @@ function setTableData(dataSet) {
 		}, {
 			"data" : "serialNo"
 		}, {
-			"data" : "date"
+			"data" : "createdDate"
 		}, {
 			"data" : "sitecode.siteCode"
 		}, {

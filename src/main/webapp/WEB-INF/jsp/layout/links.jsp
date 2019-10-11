@@ -35,6 +35,7 @@
   <link rel="stylesheet" type="text/css" href="<c:url value='/vendors/font-linearicons/style.css'/>">
   <link rel="stylesheet" type="text/css" href="<c:url value='/vendors/font-icomoon/style.css'/>">
   <link rel="stylesheet" type="text/css" href="<c:url value='/vendors/font-awesome/css/font-awesome.min.css'/>">
+  <link rel="stylesheet" type="text/css" href="<c:url value='/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css'/>">
   <script src="<c:url value='/vendors/jquery/dist/jquery.min.js'/>"></script>
   <script src="<c:url value='/vendors/popper.js/dist/umd/popper.js'/>"></script>
   <script src="<c:url value='/vendors/jquery-ui/jquery-ui.min.js'/>"></script>
@@ -74,6 +75,7 @@
   <script src="<c:url value='/vendors/d3-dsv/dist/d3-dsv.js'/>"></script>
   <script src="<c:url value='/vendors/d3-time-format/dist/d3-time-format.js'/>"></script>
   <script src="<c:url value='/vendors/techan/dist/techan.min.js'/>"></script>
+  <script src="<c:url value='/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js'/>"></script>
 
   <!-- CLEAN UI HTML ADMIN TEMPLATE MODULES-->
   <!-- v2.0.2 -->

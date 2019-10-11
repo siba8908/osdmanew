@@ -25,6 +25,10 @@ function setTableData(dataSet) {
 	}
 	_tableSiteSurveyReports = $('#pcSiteSurveyReportTable').DataTable({
 		data : dataSet,
+		dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
 		columns : [ {
 			"data" : "serialNo"
 		}, {
@@ -37,7 +41,10 @@ function setTableData(dataSet) {
 			"data" : "image"
 		}, {
 			"data" : "remark"
-		} ]
+		} ],
+		"columnDefs": [
+            {"className": "dt-center", "targets": "_all"}
+        ]
 	});
 	 $('#pcSiteSurveyReportTable thead tr').clone(true).appendTo( '#pcSiteSurveyReportTable thead' );
 	    $('#pcSiteSurveyReportTable thead tr:eq(1) th').each( function (i) {

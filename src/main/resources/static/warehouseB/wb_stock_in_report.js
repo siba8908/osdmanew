@@ -25,6 +25,10 @@ function setTableData(dataSet) {
 	}
 	_tableStockInReports = $('#warehouseBStockInReportTable').DataTable({
 		data : dataSet,
+		dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
 		columns : [ {
 			"data" : "serial"
 		}, {
@@ -35,7 +39,10 @@ function setTableData(dataSet) {
 			"data" : "createdDate"
 		}, {
 			"data" : "storageLocation"
-		} ]
+		} ],
+		"columnDefs": [
+            {"className": "dt-center", "targets": "_all"}
+        ]
 	});
 	
 	$('#warehouseBStockInReportTable thead tr').clone(true).appendTo( '#warehouseBStockInReportTable thead' );
