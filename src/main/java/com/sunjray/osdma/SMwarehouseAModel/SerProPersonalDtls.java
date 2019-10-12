@@ -30,7 +30,7 @@ public class SerProPersonalDtls implements java.io.Serializable {
 	private Integer providerId;
 	private MasterServprovrType TOsMasterServprovrType;
 	private String providerName;
-	private Integer contactNo;
+	private Long contactNo;
 	private String emailId;
 	private Integer createdBy;
 	private Date createdOn;
@@ -40,7 +40,7 @@ public class SerProPersonalDtls implements java.io.Serializable {
 	public SerProPersonalDtls() {
 	}
 
-	public SerProPersonalDtls(MasterServprovrType TOsMasterServprovrType, String providerName, Integer contactNo,
+	public SerProPersonalDtls(MasterServprovrType TOsMasterServprovrType, String providerName, Long contactNo,
 			String emailId, Integer createdBy, Date createdOn, Integer modifyBy, Date modifyOn) {
 		this.TOsMasterServprovrType = TOsMasterServprovrType;
 		this.providerName = providerName;
@@ -84,11 +84,11 @@ public class SerProPersonalDtls implements java.io.Serializable {
 	}
 
 	@Column(name = "contact_no")
-	public Integer getContactNo() {
+	public Long getContactNo() {
 		return this.contactNo;
 	}
 
-	public void setContactNo(Integer contactNo) {
+	public void setContactNo(Long contactNo) {
 		this.contactNo = contactNo;
 	}
 

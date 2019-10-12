@@ -1,39 +1,39 @@
 package com.sunjray.osdma.SMwarehouseBController;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("wb")
 public class WBIndexController {
 
-	@RequestMapping(value = "/sm-warehouse-b-product-list", method = RequestMethod.GET)
-	public String smWarehouseBProfuctList() {
+	@GetMapping("/sm-warehouse-b-product-list")
+	public String warehouseBProductList() {
 		return "WAREHOUSE-B/sm-warehouse-b-product-list";
 	}
 
-	@RequestMapping(value = "/sm-warehouse-b-stocks", method = RequestMethod.GET)
-	public String smWarehouseBStockIn() {
+	@GetMapping("/sm-warehouse-b-stocks")
+	public String smWarehouseBStocksIn() {
 		return "WAREHOUSE-B/sm-warehouse-b-stocks";
 	}
 	
-	@RequestMapping(value = "/sm-warehouse-b-stock-out", method = RequestMethod.GET)
+	@GetMapping("/sm-warehouse-b-stock-out")
 	public String smWarehouseBStockOut() {
 		return "WAREHOUSE-B/sm-warehouse-b-stock-out";
 	}
 	
-	@RequestMapping(value = "/warehouse-b-products-report", method = RequestMethod.GET)
+	@GetMapping("/warehouse-b-products-report")
 	public String smWarehouseBProductsReport() {
 		return "WAREHOUSE-B/sm-wb-products-report";
 	}
 	
-	@RequestMapping(value = "/warehouse-b-stock-in-report", method = RequestMethod.GET)
+	@GetMapping("/warehouse-b-stock-in-report")
 	public String smWarehouseBStockInReport() {
 		return "WAREHOUSE-B/sm-wb-stock-in-report";
 	}
 	
-	@RequestMapping(value = "/warehouse-b-stock-out-report", method = RequestMethod.GET)
+	@GetMapping("/warehouse-b-stock-out-report"	)
 	public String smWarehouseBStockOutReport() {
 		return "WAREHOUSE-B/sm-wb-stock-out-report";
 	}
