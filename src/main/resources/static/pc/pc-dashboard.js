@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$.ajax({
 		url : "/OSDMA/fetch-pm-team-task",
 		error : function(e) {
+			console.log(e);
 		},
 		success : function(data) {
 			$.each(data, function(index) {
@@ -34,7 +35,7 @@ function setTableData(dataSet) {
 		columns : [ {
 			"data" : "serialNo"
 		}, {
-			"data" : "sitecode"
+			"data" : "sitecode.siteCode"
 		}, {
 			"data" : "masterTask.taskName"
 		}, {

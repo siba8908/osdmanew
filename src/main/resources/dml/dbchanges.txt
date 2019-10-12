@@ -1,0 +1,2 @@
+ALTER TABLE `osdma`.`t_os_pm_team_task_map` 
+CHANGE COLUMN `task_status` `task_status` ENUM('COMPLETE', 'INPROGRESS', 'NOTSTARTED') NOT NULL DEFAULT 'NOTSTARTED' ;
