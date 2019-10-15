@@ -66,7 +66,7 @@
 												</div>
 											</div></td>
 										<td><input class="form-control form-control-rounded"
-											id="remark" type="text" placeholder=""
+											id="remark0" type="text" placeholder=""
 											style="margin-left: 5px" /></td>
 										<td><button class="fa fa-plus btnAdd"
 												style="height: 30px"></button></td>

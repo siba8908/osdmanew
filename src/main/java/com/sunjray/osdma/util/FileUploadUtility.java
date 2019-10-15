@@ -47,6 +47,7 @@ public class FileUploadUtility {
 			try {
 				byte[] bytes = Files.readAllBytes(file.toPath());
 				File dir = new File(filepath);
+				System.out.println(dir.exists());
 				if (!dir.exists()) {
 					dir.mkdirs();
 				}
