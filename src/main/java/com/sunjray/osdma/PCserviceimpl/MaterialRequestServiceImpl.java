@@ -21,4 +21,9 @@ public class MaterialRequestServiceImpl implements MaterialRequestService {
 		materialRequestRepository.saveAll(materialRequest);
 	}
 
+	@Override
+	public List<PcMaterialRequest> findAll() {
+		return materialRequestRepository.findAll();
+	}
+
 }

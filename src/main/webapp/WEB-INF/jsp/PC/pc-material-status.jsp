@@ -37,8 +37,6 @@
 										<th>Serial</th>
 										<th>Station Type</th>
 										<th>Material For</th>
-										<th>Item Name</th>
-										<th>Quantity</th>
 										<th>Status</th>
 									</tr>
 								</thead>

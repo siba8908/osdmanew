@@ -24,6 +24,10 @@ function setTableData(dataSet) {
 	}
 	_tableStockOutReports = $('#warehouseAStockOutReportTable').DataTable({
 		data : dataSet,
+		dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
 		columns : [ {
 			"data" : "serial"
 		}, {

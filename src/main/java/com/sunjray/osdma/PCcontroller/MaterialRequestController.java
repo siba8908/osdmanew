@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,5 +34,10 @@ public class MaterialRequestController {
 		return ResponseEntity.created(new URI("/pc/save-material-request"))
 	            .headers(HeaderUtil.createEntityCreationAlert("MaterialRequest", "created"))
 	            .body(new AppResponse("success"));
+	}
+	
+	@GetMapping("/fetch-pc-material-status")
+	public List<PcMaterialRequest> getAllProduct() {
+		return materialRequestService.findAll();
 	}
 }

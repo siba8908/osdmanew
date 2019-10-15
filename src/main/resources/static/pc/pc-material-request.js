@@ -126,6 +126,7 @@ function sendMaterialRequest() {
 						materialRequest.masterStationType = masterStationType;
 						materialRequest.masterWorkStage = masterWorkStage;
 						materialRequest.siteCode = siteCode;
+						materialRequest.status="RAISED";
 						materialRequestList.push(materialRequest);
 					});
 	$.ajax({
@@ -135,6 +136,7 @@ function sendMaterialRequest() {
 			window.location.reload();
 		},
 		success : function(data) {
+			window.location.reload();
 		},
 		dataType : "json",
 		contentType : 'application/json; charset=utf-8',

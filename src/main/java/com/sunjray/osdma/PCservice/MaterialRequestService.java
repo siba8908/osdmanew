@@ -10,4 +10,6 @@ public interface MaterialRequestService {
 
 	void saveMaterialRequest(@Valid List<PcMaterialRequest> materialRequest);
 
+	List<PcMaterialRequest> findAll();
+
 }

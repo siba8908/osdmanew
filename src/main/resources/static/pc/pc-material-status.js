@@ -1,16 +1,14 @@
 var _tableMaterialStatusReports;
 $(document).ready(function() {
 	$.ajax({
-		url : "fetch-material-status",
+		url : "fetch-pc-material-status",
 		error : function(e) {
 		},
 		success : function(data) {
 			$.each(data, function(index) {
 				this.serialNo = index + 1;
-				this.status = "Status";
 			});
 			setTableData(data);
-			console.log(data)
 		},
 		dataType : "json",
 		contentType : 'application/json; charset=utf-8',
@@ -32,10 +30,6 @@ function setTableData(dataSet) {
 			"data" : "masterStationType.stationTypeName"
 		}, {
 			"data" : "masterWorkStage.stageName"
-		}, {
-			"data" : "masterProduct.productName"
-		}, {
-			"data" : "quantity"
 		}, {
 			"data" : "status"
 		} ]
